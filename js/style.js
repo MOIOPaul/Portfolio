@@ -2,49 +2,6 @@ cpt = 0;
 css = document.getElementById("css");
 compte = localStorage.getItem('compte');
 
-//                                  //
-//  animation présentation          //
-//                                  //
-
-window.onload = function(){animationContain()};
-
-function animationContain(){
-    
-    var Win = window.innerHeight;
-    var all = document.documentElement.scrollTop;
-    var pres = document.getElementById("presentation").offsetTop;
-    var article = document.getElementById("article").offsetTop;
-    var galerie = document.getElementById("galerie").offsetTop;
-    var forum = document.getElementById("contact").offsetTop;
-    
-    if ((Win + all - pres) > 200){      // différence entre la hauteur d'écran interrieur et la position de la section presentation dans la page. Si afficher au dessus de 200px à l'écran alors ...
-        document.getElementById("presentation").className = "visible";
-    }
-    else{
-        document.getElementById("presentation").className = "cacher";
-    }
-    
-    if ((Win + all - article) > 200){      
-        document.getElementById("article").className = "visible";
-    }
-    else{
-        document.getElementById("article").className = "cacher";
-    }
-    
-    if ((Win + all - galerie) > 200){
-        document.getElementById("galerie").className = "visible";
-    }
-    else{
-        document.getElementById("galerie").className = "cacher";
-    }
-    
-    if ((Win + all - forum) > 300){
-        document.getElementById("contact").className = "visible";
-    }
-    else{
-        document.getElementById("contact").className = "cacher";
-    }
-}
 
 //                                  //
 //  Changement nav au scroll        //
@@ -76,7 +33,6 @@ window.onscroll = function() {Scroll()};
         
         lastScroll = scrolling;
         
-        animationContain();
     }
 
 //                                  //
