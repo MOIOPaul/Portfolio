@@ -421,68 +421,6 @@ a:active , #navEntete li:active , #navReseau li:active , button:active{
 }
 
 /* =========================================== */
-/* ANIMATION SCROLL                            */
-/* =========================================== */
-
-#presentation.cacher {
-    transform: matrix(1, 0, 0, 1, 0, 100);
-    opacity: 0;
-    transition: 0.6s;
-}
-
-#presentation.visible{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    opacity: 1;
-    transition: 0.6s;
-}
-
-/* ================================ */
-
-#article.cacher {
-    transform: matrix(1, 0, 0, 1, -100, 0);
-    opacity: 0;
-    transition: 0.6s;
-}
-
-#article.visible{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    opacity: 1;
-    transition: 0.6s;
-}
-
-/* ================================ */
-
-#galerie.cacher {
-    transform: matrix(1, 0, 0, 1, 100, 0);
-    opacity: 0;
-    transition: 0.6s;
-}
-
-#galerie.visible{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    opacity: 1;
-    transition: 0.6s;
-}
-
-/* ================================ */
-
-#contact.cacher {
-    transform: matrix(1, 0, 0, 1, 0, 100);
-    opacity: 0;
-    transition: 0.6s;
-}
-
-#contact
-.sectionCacher{
-    display: none;
-}
-.visible{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    opacity: 1;
-    transition: 0.6s;
-}
-
-/* =========================================== */
 /* PRESENTATION                                */
 /* =========================================== */
 
@@ -524,6 +462,33 @@ span.espace{
 /* =========================================== */
 /* ARTICLE                                     */
 /* =========================================== */
+
+#navArticle{
+    margin-bottom: 25px;
+}
+
+#navArticle ul , #navArticle li {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width : 50%;
+    margin: auto;
+}
+
+#navArticle .actif , #navArticle .inactif{
+    justify-content: center;
+    align-content: center;
+    width: 5em;
+    border-bottom: 2px solid #000;
+    border-width: 0%;
+    padding: 0px;
+    transition: 0.2s;
+}
+
+#navArticle .inactif{
+    border-bottom: 0px;
+    transition: 0.2s
+}
 
 .sectionCacher{
     display: none;

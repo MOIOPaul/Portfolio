@@ -425,65 +425,6 @@ a:active , #navEntete li:active , #navReseau li:active , button:active{
 }
 
 /* =========================================== */
-/* ANIMATION SCROLL                            */
-/* =========================================== */
-
-#presentation.cacher {
-    transform: matrix(1, 0, 0, 1, 0, 100);
-    opacity: 0;
-    transition: 0.6s;
-}
-
-#presentation.visible{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    opacity: 1;
-    transition: 0.6s;
-}
-
-/* ================================ */
-
-#article.cacher {
-    transform: matrix(1, 0, 0, 1, -100, 0);
-    opacity: 0;
-    transition: 0.6s;
-}
-
-#article.visible{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    opacity: 1;
-    transition: 0.6s;
-}
-
-/* ================================ */
-
-#galerie.cacher {
-    transform: matrix(1, 0, 0, 1, 100, 0);
-    opacity: 0;
-    transition: 0.6s;
-}
-
-#galerie.visible{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    opacity: 1;
-    transition: 0.6s;
-}
-
-/* ================================ */
-
-#contact.cacher {
-    transform: matrix(1, 0, 0, 1, 0, 100);
-    opacity: 0;
-    transition: 0.6s;
-}
-
-#contact.visible{
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    opacity: 1;
-    transition: 0.6s;
-}
-
-
-/* =========================================== */
 /* PRESENTATION                                */
 /* =========================================== */
 
