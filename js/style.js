@@ -167,6 +167,8 @@ function verification(){
         plus.className = "visible";
         bouton.className = "visible";
         setTimeout(function(){document.location.href = document.getElementById("legende").href;}, 200);
+        
+        console.log(document.getElementById("legende").href);
     }
 }
 
@@ -201,11 +203,22 @@ function avant(){
     
     var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length;
     
+    for(i= 0 ; i <= cpt ; i++){
+        numImg = totalImg - i -1;
+    }
+    
     if(cpt == (Number(totalImg) -1)){
         cpt = 0;
     }
     else{
         cpt += 1;
+    }
+    
+    if(numImg == (Number(totalImg) -1)){
+        numImg = 0;
+    }
+    else{
+        numImg += 1;
     }
 
     img = document.getElementsByClassName("imgZoom")[cpt];
@@ -213,12 +226,16 @@ function avant(){
     
     imgZoomer.src = img.src;
     legendeTexte.innerHTML = img.alt;
-    legendeTexte.href = "#artc" + cpt;
+    legendeTexte.href = "#artc" + numImg;
 }
 
 function arriere(){
     
     var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length;
+    
+    for(i= 0 ; i <= cpt ; i++){
+        numImg = totalImg - i -1;
+    }
     
     if(cpt == 0){
         cpt = Number(totalImg) -1;
@@ -227,8 +244,15 @@ function arriere(){
         cpt -= 1;
     }
     
+    if(numImg == 0){
+        numImg = Number(totalImg) -1;
+    }
+    else{
+        numImg -= 1;
+    }
     
-    img = document.getElementsByClassName("imgZoom")[cpt];
+    
+    img = document.getElementsByClassName("imgZoom")[numImg];
     imgZoomer = document.getElementById("imgZoomer");
     
     imgZoomer.src = img.src;
