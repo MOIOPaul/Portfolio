@@ -63,11 +63,11 @@
                 
             </nav>
             
-            <figure>
-                <iframe id="video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <figure id="banner">
+                <img id="bannerImg" src="medias/banni%C3%A8re.png" alt = "bannière"/>
             </figure>
             
-            <script defer type="text/javascript">
+            <script type="text/javascript">
                 var lastScroll = document.documentElement.scrollTop;
 
                 window.onscroll = function() {Scroll()};
@@ -135,7 +135,7 @@
                
             </nav>
             
-            <script defer type="text/javascript">
+            <script type="text/javascript">
                 css = document.getElementById("css");
                 compte = localStorage.getItem('compte');
                 
@@ -149,31 +149,23 @@
                            css.href = "css/styleJour.css";
                            css.className = "Jour";
                            localStorage.setItem('compte','Jour');
-
-                           document.getElementById("video").src = "https://www.youtube.com/embed/RHUGCOz4jJU";
                        }
 
                        else {
                            css.href = "css/styleNuit.css";
                            css.className = "Nuit";
                            localStorage.setItem('compte','Nuit');
-
-                           document.getElementById("video").src = "https://www.youtube.com/embed/P4q6dVdvF40";
                        }
                    }
 
                 if (compte == "Jour"){
                     css.href = "css/styleJour.css";
                     css.className = "Jour";
-
-                    setTimeout(function(){document.getElementById("video").src = "https://www.youtube.com/embed/RHUGCOz4jJU";}, 1);
                 }
 
                 else {
                     css.href = "css/styleNuit.css";
                     css.className = "Nuit";
-
-                    setTimeout(function(){document.getElementById("video").src = "https://www.youtube.com/embed/P4q6dVdvF40";}, 1);
                 }
             </script>
             
@@ -1477,7 +1469,7 @@
                 
             </section>
             
-            <script defer type="text/javascript">
+            <script type="text/javascript">
             
             </script>
             
@@ -1553,7 +1545,7 @@
                 </div>
             </section>
             
-            <script defer type="text/javascript">
+            <script type="text/javascript">
             
                 //                                  //
                 // Bouton navigation entete Article //
@@ -1673,7 +1665,7 @@
                 
             </div>
             
-            <script defer type="text/javascript">
+            <script type="text/javascript">
                 cpt = 0;
                 
                 //                                  //
