@@ -67,7 +67,7 @@
                 <img id="bannerImg" src="medias/banni%C3%A8re.png" alt = "bannière"/>
             </figure>
             
-            <script type="text/javascript">
+            <script>
                 var lastScroll = document.documentElement.scrollTop;
 
                 window.onscroll = function() {Scroll()};
@@ -135,7 +135,7 @@
                
             </nav>
             
-            <script type="text/javascript">
+            <script>
                 css = document.getElementById("css");
                 compte = localStorage.getItem('compte');
                 
@@ -1469,7 +1469,7 @@
                 
             </section>
             
-            <script type="text/javascript">
+            <script>
             
                 //                                  //
                 // Bouton navigation entete Article //
@@ -1663,40 +1663,14 @@
                 
             </div>
             
-            <script type="text/javascript">
+        </main>
+        
+        <script>
                 cpt = 0;
                 
                 //                                  //
                 //  Zoom image                      //
                 //                                  //
-
-                function verification(){
-
-                    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
-
-                    for(i = 0 ; i <= cpt ; i++){
-                        numImg = totalImg - i;
-                    }
-
-                    var plus = document.getElementById("plusImg");
-                    var bouton = document.getElementById("recouvrementImg");
-
-                    if(numImg > 1){
-                        nbNavArticle = 1;
-
-                        clickNavArticle();
-
-                        plus.className = "visible";
-                        bouton.className = "visible";
-                        setTimeout(function(){document.location.href = document.getElementById("legende").href;}, 200);
-                    }else{
-                        nbNavArticle = 1;
-
-                        clickNavArticle();
-                        
-                        function(){document.location.href = document.getElementById("legende").href;}
-                    }
-                }
 
                 function Zoom(){
 
@@ -1716,6 +1690,36 @@
                     imgZoomer.src = img.src;
                     legendeTexte.innerHTML = img.alt;
                     legendeTexte.href = "#artcImg" + cpt;
+                }
+            
+                function verification(){
+
+                    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
+
+                    for(i = 0 ; i <= cpt ; i++){
+                        numImg = totalImg - i;
+                    }
+
+                    var plus = document.getElementById("plusImg");
+                    var bouton = document.getElementById("recouvrementImg");
+
+                    if(numImg > 1){
+                        nbNavArticle = 1;
+
+                        clickNavArticle();
+
+                        plus.className = "visible";
+                        bouton.className = "visible";
+                        setTimeout(function(){document.location.href = document.getElementById("legende").href;}, 200);
+                    }
+                    
+                    else{
+                        nbNavArticle = 1;
+
+                        clickNavArticle();
+                        
+                        setTimeout(function(){document.location.href = document.getElementById("legende").href;}, 200);
+                    }
                 }
 
                 function ferme(){ 
@@ -1805,8 +1809,6 @@
 
                 });
             </script>
-            
-        </main>
         
         <footer>
             <p>Cr&eacute;ateur : Paul MOIO</p>
