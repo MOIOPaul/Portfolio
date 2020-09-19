@@ -1672,6 +1672,7 @@
                 //  Zoom image                      //
                 //                                  //
 
+            
                 function Zoom(){
 
                     var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
@@ -1802,6 +1803,11 @@
 
                         case "ArrowLeft":
                             arriere();
+
+                            break;
+                        case "Enter":
+                            verification();
+                            ferme();
 
                             break;
                     }
