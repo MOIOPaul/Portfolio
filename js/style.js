@@ -110,18 +110,14 @@ function clickNavArticle(){
         
         
     for (i=0; i < btnNav.length ; i++){
-            other = i+1;
         
-        if (other >= btnNav.length){
-            other = 0;
-        }
-        
-        btnNav[other].className = "inactif";
-        sectionNav[other].className = "sectionCacher";
+        btnNav[i].className = "inactif";
+        sectionNav[i].className = "sectionCacher";
     }
     
     if (btnNav[nbNavArticle].className = "inactif"){
         btnNav[nbNavArticle].className = "actif";
+        
     }
     if (sectionNav[nbNavArticle].className = "sectionCacher"){
         sectionNav[nbNavArticle].className = "sectionVisible";
@@ -131,10 +127,13 @@ function clickNavArticle(){
 // Bouton Plus d'articles           //
 //                                  //
 
+detailPlusNav = 'Img';
+
 function plus(){ 
     
-    var plus = document.getElementById("plus");
-    var bouton = document.getElementById("recouvrement");
+
+    var plus = document.getElementById("plus" + detailPlusNav);
+    var bouton = document.getElementById("recouvrement" + detailPlusNav);
     
     if(plus.className == "cacher"){
         plus.className = "visible";
@@ -144,7 +143,7 @@ function plus(){
         plus.className = "cacher";
         bouton.className = "cacher";
         
-        setTimeout(function(){document.location.href = "#recouvrement";}, 200);
+        setTimeout(function(){document.location.href = "#recouvrement" + detailPlusNav;}, 200);
     }
 }
 
@@ -154,30 +153,32 @@ function plus(){
 
 function verification(){
     
-    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length;
+    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
     
-    for(i= 0 ; i <= cpt ; i++){
-        numImg = totalImg - i -1;
+    for(i = 0 ; i <= cpt ; i++){
+        numImg = totalImg - i;
     }
     
-    var plus = document.getElementById("plus");
-    var bouton = document.getElementById("recouvrement");
+    var plus = document.getElementById("plusImg");
+    var bouton = document.getElementById("recouvrementImg");
     
     if(numImg > 1){
+        nbNavArticle = 1;
+        
+        clickNavArticle();
+        
         plus.className = "visible";
         bouton.className = "visible";
         setTimeout(function(){document.location.href = document.getElementById("legende").href;}, 200);
-        
-        console.log(document.getElementById("legende").href);
     }
 }
 
 function Zoom(){
     
-    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length;
+    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
     
     for(i= 0 ; i <= cpt ; i++){
-        numImg = totalImg - i -1;
+        numImg = totalImg - i;
     }
     
     BcgZoom = document.getElementById("bcgZoom");
@@ -189,7 +190,7 @@ function Zoom(){
     BcgZoom.className = "ouvert";
     imgZoomer.src = img.src;
     legendeTexte.innerHTML = img.alt;
-    legendeTexte.href = "#artc" + cpt;
+    legendeTexte.href = "#artcImg" + cpt;
 }
 
 function ferme(){ 
@@ -201,63 +202,57 @@ function ferme(){
 
 function avant(){
     
-    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length;
+    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
+
     
-    for(i= 0 ; i <= cpt ; i++){
-        numImg = totalImg - i -1;
+    if(cpt == -1){
+        cpt = totalImg;
+    }
+    else{
+        cpt -= 1;
     }
     
-    if(cpt == (Number(totalImg) -1)){
+    for(i= 0 ; i <= cpt ; i++){
+        numImg = totalImg - i;
+    }
+    
+    if( numImg == (totalImg + 1)){
+        numImg = 0;
+    }
+
+    img = document.getElementsByClassName("imgZoom")[numImg];
+    imgZoomer = document.getElementById("imgZoomer");
+    
+    imgZoomer.src = img.src;
+    legendeTexte.innerHTML = img.alt;
+    legendeTexte.href = "#artcImg" + cpt;
+}
+
+function arriere(){
+    
+    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
+    
+    if( cpt == totalImg){
         cpt = 0;
     }
     else{
         cpt += 1;
     }
     
-    if(numImg == (Number(totalImg) -1)){
-        numImg = 0;
-    }
-    else{
-        numImg += 1;
-    }
-
-    img = document.getElementsByClassName("imgZoom")[cpt];
-    imgZoomer = document.getElementById("imgZoomer");
-    
-    imgZoomer.src = img.src;
-    legendeTexte.innerHTML = img.alt;
-    legendeTexte.href = "#artc" + numImg;
-}
-
-function arriere(){
-    
-    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length;
-    
     for(i= 0 ; i <= cpt ; i++){
-        numImg = totalImg - i -1;
+        numImg = totalImg - i;
     }
     
-    if(cpt == 0){
-        cpt = Number(totalImg) -1;
+    if( numImg == (-1)){
+        numImg = totalImg;
     }
-    else{
-        cpt -= 1;
-    }
-    
-    if(numImg == 0){
-        numImg = Number(totalImg) -1;
-    }
-    else{
-        numImg -= 1;
-    }
-    
     
     img = document.getElementsByClassName("imgZoom")[numImg];
     imgZoomer = document.getElementById("imgZoomer");
     
     imgZoomer.src = img.src;
     legendeTexte.innerHTML = img.alt;
-    legendeTexte.href = "#artc" + cpt;
+    legendeTexte.href = "#artcImg" + cpt;
 }
 
 
