@@ -605,19 +605,19 @@ div.pair p{
 
 /* ======== Partie cacher ====================== */
 
-#plus.cacher{
+#plusVd.cacher , #plusImg.cacher , #plusMsc.cacher{
     height: 0px;
     transform: scaleY(0.0);
     transition: 0.2s;
 }
 
-#plus.visible{
+#plusVd.visible , #plusImg.visible , #plusMsc.visible{
     height: 100%;
     transform: scaleY(1);
     transition: 0.2s;
 }
 
-#recouvrement.cacher , #recouvrement.visible{
+#recouvrementVd.cacher , #recouvrementImg.cacher , #recouvrementMsc.cacher , #recouvrementVd.visible , #recouvrementImg.visible , #recouvrementMsc.visible{
     position: relative;
     left: calc(50% - 1em);
     bottom: calc(-2em - 5px);
@@ -632,7 +632,7 @@ div.pair p{
     transition 0.2s;
 }
 
-#recouvrement.visible{
+#recouvrementVd.visible , #recouvrementImg.visible , #recouvrementMsc.visible{
     transform: rotate(-90deg);
     transition 0.2s;
 }
