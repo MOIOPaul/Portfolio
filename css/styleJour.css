@@ -615,12 +615,14 @@ div.pair p{
 /* ======== Partie cacher ====================== */
 
 #plusVd.cacher , #plusImg.cacher , #plusMsc.cacher{
+    display: none;
     height: 0px;
     transform: scaleY(0.0);
     transition: 0.2s;
 }
 
 #plusVd.visible , #plusImg.visible , #plusMsc.visible{
+    display: block;
     height: 100%;
     transform: scaleY(1);
     transition: 0.2s;
