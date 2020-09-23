@@ -13,6 +13,19 @@
 
     </head>
     <body>
+      <div id="load" class="inactif">
+          <img id="gifCharge" src="medias/chat-de-chargement-gif.gif" alt="chat de chargement"/>
+          <p>CHARGEMENT...</p>
+      </div>
+      
+        <script>
+            document.getElementById("load").className = "actif";
+            
+            window.addEventListener("load", function(){
+                document.getElementById("load").className = "inactif";
+            })
+        </script>
+      
        <div id="bg-image"></div>
         <header>
            
@@ -23,24 +36,13 @@
             <nav id="navEnTete" class="notScroll">
                <ul id="produit">
                    <li>
-                       <a href="javascript:void(0)" onclick="navEnTeteArticle()">Articles</a>
-                       <ul id="btnNavArticle" class="inactif">
-                           <li onclick="navEnTeteArticle()">
-                               <a href="index.html#article" class="inactif" onclick="nbNavArticle=0; clickNavArticle(); ">Vidéo</a>
-                           </li>
-                           <li onclick="navEnTeteArticle()">
-                               <a href="index.html#article" class="actif" onclick="nbNavArticle=1; clickNavArticle(); ">Image</a>
-                           </li>
-                           <li onclick="navEnTeteArticle()">
-                               <a href="index.html#article" class="inactif" onclick="nbNavArticle=2; clickNavArticle(); ">Musique</a>
-                           </li>
-                       </ul>
+                       <a href="index.html#presentation">Présentation</a>
                    </li>
                    <li>
                        <div class="decoration"></div>
                    </li>
                    <li>
-                       <a href="index.html#galerie">Galerie</a>
+                       <a href="index.html#competences">Compétences</a>
                    </li>
                </ul>
                
@@ -50,9 +52,23 @@
                
                <ul id="utilisateur">
                    <li>
-                       <a href="index.html#presentation">Présentation</a>
+                       <a href="javascript:void(0)" onclick="navEnTeteArticle()">Réalisations</a>
+                       <ul id="btnNavArticle" class="inactif">
+                           <li onclick="navEnTeteArticle()">
+                               <a href="index.html#article" class="inactif" onclick="nbNavArticle=0; clickNavArticle(); ">Audiovisuel</a>
+                           </li>
+                           <li onclick="navEnTeteArticle()">
+                               <a href="index.html#article" class="actif" onclick="nbNavArticle=1; clickNavArticle(); ">Graphisme</a>
+                           </li>
+                           <li onclick="navEnTeteArticle()">
+                               <a href="index.html#article" class="inactif" onclick="nbNavArticle=2; clickNavArticle(); ">Musical</a>
+                           </li>
+                           <li>
+                               <a href="index.html#galerie">Galerie</a>
+                           </li>
+                       </ul>
                    </li>
-                   <li>
+                    <li>
                        <div class="decoration"></div>
                    </li>
                    <li>
@@ -191,8 +207,10 @@
                     Je suis ce que l'on appelle souvent un créatif. Ce que j'aime faire dans la vie c'est créer toutes sortes de choses, que ce soit des images, des sites web, des vidéos, mais principalement des jeux vidéo. J'ai l'intention de créer un jeu vidéo et je mets tout en œuvre pour finaliser ce projet. Je suis actuellement en deuxième année de formation pour un DUT MMI (métier du multimédia et interne) à Saint-Dié-des-Vosges. Je suis un homme excentrique, travailleur et surtout, je suis très motivé à créer ce jeu vidéo que je conçois depuis 2 ans. La plupart des créations présentes sur ce site sont des visuels pour mon jeu vidéo et/ou des tableaux pour entraîner mes compétences. Je sais utiliser Photoshop, illustrateur, Indesign, aftereffect, Blender, Flstudio20, et unity. J'ai des capacités en HTML, CSS, Javascript, PHP, et Anglais. J'écris aussi actuellement un livre sur mon jeu vidéo en plus de son développement avant de le mettre en place grâce à une structure comme From Software.
                 </p>
                 
-                <a id="cv" href="medias/Curriculum%20vitae%20MOIO_Paul.pdf" download="Curriculum%20vitae%20MOIO_Paul.pdf" target="_blank">Télécharger mon CV</a>
+                <a id="cv" href="medias/Curriculum%20vitae%20MOIO_Paul.pdf" target="_blank">Télécharger mon CV</a>
             </section>
+            
+
             
             <!-- ===================== -->
             <!-- Section Article       -->
@@ -200,25 +218,25 @@
             
             <section id="article">
                
-                <h1>ARTICLES</h1>
+                <h1>RÉALISATIONS</h1>
                 
                 <nav id="navArticle">
                     <ul>
                        <li>
-                           <h2><a href="index.html#article" class="inactif" onclick="nbNavArticle=0; clickNavArticle(); ">Vidéo</a></h2>
+                           <h2><a href="index.html#article" class="inactif" onclick="nbNavArticle=0; clickNavArticle(); ">Audiovisuel</a></h2>
                        </li>
                        <li>
-                           <h2><a href="index.html#article" class="actif" onclick="nbNavArticle=1; clickNavArticle(); ">Image</a></h2>
+                           <h2><a href="index.html#article" class="actif" onclick="nbNavArticle=1; clickNavArticle(); ">Graphisme</a></h2>
                        </li>
                        <li>
-                           <h2><a href="index.html#article" class="inactif" onclick="nbNavArticle=2; clickNavArticle(); ">Musique</a></h2>
+                           <h2><a href="index.html#article" class="inactif" onclick="nbNavArticle=2; clickNavArticle(); ">Musical</a></h2>
                        </li>
                     </ul>
                 </nav>
                 
                 <section id="VideoDt" class="sectionCacher">
                 
-                    <article id="artcVd4" class="impair ">
+                    <article id="artcVd5" class="impair ">
                        <figure class="impair" >
                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2k5IbZRuo_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                        </figure>
@@ -236,7 +254,7 @@
 
                     </article>
 
-                    <article id="artcVd3" class="pair">
+                    <article id="artcVd4" class="pair">
                         <figure class="pair">
                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5iCopEjXLek" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </figure>
@@ -255,7 +273,7 @@
 
                     <div id="plusVd" class="cacher">
 
-                        <article id="artcVd2" class="impair ">
+                        <article id="artcVd3" class="impair ">
                            <figure class="impair">
                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Qx08YyhMqrU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                            </figure>
@@ -273,12 +291,30 @@
 
                         </article>
 
-                       <article id="artcVd1" class="pair">
-                            <figure class="pair">
+                      <article id="artcVd2" class="pair ">
+                           <figure class="pair">
+                               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/bDTYmiCAqv4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                           </figure>
+
+                            <div class="pair">
+                                <h2>TRAILER GUERILLA RADIO</h2>
+                                <h3>détails</h3>
+                                <ul>
+                                    <li>Dimensions : 1280 x 720 pixels</li>
+                                    <li>Technique : PremierPro, Photoshop et AfterEffect</li>
+                                    <li>Type : Vidéo trailler</li>
+                                    <li>Date : 16/01/2020</li>
+                                </ul>
+                            </div>
+
+                        </article>
+                      
+                       <article id="artcVd1" class="impair">
+                            <figure class="impair">
                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/D_QIIgNVROQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </figure>
 
-                            <div class="pair">
+                            <div class="impair">
                                 <h2>Game designer, un métier de passion</h2>
                                 <h3>détails</h3>
                                 <ul>
@@ -290,12 +326,12 @@
                             </div>
                         </article>
                        
-                        <article id="artc0" class="impair">
-                            <figure class="impair">
+                        <article id="artc0" class="pair">
+                            <figure class="pair">
                                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Md0ltAEzhLE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </figure>
 
-                            <div class="impair">
+                            <div class="pair">
                                 <h2>Lockedup</h2>
                                 <h3>détails</h3>
                                 <ul>
@@ -309,7 +345,7 @@
 
                     </div>
 
-                    <button id="recouvrementVd" class="cacher" onclick="plus(); detailPlusNav = 'Vd';">&#10148;</button>
+                    <button id="recouvrementVd" onclick="plus(); detailPlusNav = 'Vd';">Plus de créations</button>
                 
                 </section>
                 
@@ -936,7 +972,7 @@
 
                     </div>
 
-                    <button id="recouvrementImg" class="cacher" onclick="plus(); detailPlusNav = 'Img';">&#10148;</button>
+                    <button id="recouvrementImg" onclick="plus(); detailPlusNav = 'Img';">Plus de créations</button>
                 
                 </section>
                 
@@ -1051,7 +1087,7 @@
 
                     </div>
 
-                    <button id="recouvrementMsc" class="cacher" onclick="plus(); detailPlusNav = 'Msc';">&#10148;</button>
+                    <button id="recouvrementMsc" onclick="plus(); detailPlusNav = 'Msc';">Plus de créations</button>
                 
                 </section>
                 
@@ -1121,11 +1157,11 @@
 
                     if(plus.className == "cacher"){
                         plus.className = "visible";
-                        bouton.className = "visible";
+                        bouton.innerHTML = "Moins de créations";
                     }
                     else{
                         plus.className = "cacher";
-                        bouton.className = "cacher";
+                        bouton.innerHTML = "Plus de créations";
 
                         setTimeout(function(){document.location.href = "#recouvrement" + detailPlusNav;}, 200);
                     }
@@ -1235,7 +1271,6 @@
                     </figure>
                 </div>
             </section>
-            
             
             <!-- ===================== -->
             <!-- Section conact        -->
