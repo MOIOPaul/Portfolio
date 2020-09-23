@@ -1,4 +1,48 @@
 /* =========================================== */
+/* LOAD                                        */
+/* =========================================== */
+
+#load{
+    visibility: visible;
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(26, 26, 26, 1);
+    transition : 0.5s;
+}
+
+#load.inactif{
+    width: 0%;
+    opacity: 0.8;
+    visibility: hidden;
+}
+
+#load p{
+    display: block;
+    color : #EEE;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+#load.actif #gifCharge{
+    display: block;
+    height: 200px;
+    width: auto;
+}
+
+#load.inactif p , #load.inactif #gifCharge{
+    display: none;
+}
+
+/* =========================================== */
 /* REGLAGE                                     */
 /* =========================================== */
 
@@ -41,7 +85,7 @@ body{
     display: flex;
     flex-direction: column;
     color : #000;
-    background-color: #EEE;
+    background-color: #000;
 }
 
 header{
@@ -54,14 +98,14 @@ main{
     display: flex;
     flex-direction: column;
     align-content: space-around;
-    background-color: rgba(240, 240, 240, 0.7);
+    background-color: rgba(255, 255, 255, 0.65);
     transition: 0.2s;
     padding: 0px 40px 0px 40px;
     width: 91%;
     flex-grow: 1;
     height: 100%;
     margin: auto;
-    box-shadow: 0px 0px 100px 50px rgba(38, 12, 0, 0.8);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.8);
 }
 
 footer{
@@ -103,7 +147,7 @@ h2{
 #bg-image{
     position: fixed;
     z-index: -1;
-    background-image: url(../medias/Aldion-Aube-pale.png);
+    background-image: url(../medias/erbor%20eder.png);
     width: 100%;
     height: 100%;
     background-position: center;
@@ -538,6 +582,7 @@ article h3{
     border-bottom: 2px solid #000;
     padding-bottom: -75px;
     margin-bottom: calc(2em + 25px);
+    box-shadow: inset 0px -40px 20px -20px rgba(0 , 0 , 0 , 0.4);
 }
 
 article.impair , article.pair{
@@ -628,23 +673,17 @@ div.pair p{
     transition: 0.2s;
 }
 
-#recouvrementVd.cacher , #recouvrementImg.cacher , #recouvrementMsc.cacher , #recouvrementVd.visible , #recouvrementImg.visible , #recouvrementMsc.visible{
+#recouvrementVd , #recouvrementImg , #recouvrementMsc{
     position: relative;
-    left: calc(50% - 1em);
-    bottom: calc(-2em - 5px);
+    bottom: -60px;
     display: flex;
     justify-content: space-around;
     align-self: center;
     text-align: center;
+    margin: auto;
     padding: 20px;
-    transform: rotate(90deg);
-    color: #000;
-    font-size: 2em;
-    transition 0.2s;
-}
-
-#recouvrementVd.visible , #recouvrementImg.visible , #recouvrementMsc.visible{
-    transform: rotate(-90deg);
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1em;
     transition 0.2s;
 }
 
@@ -657,7 +696,7 @@ div.pair p{
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    width: 75%;
+    width: 100%;
     margin: auto;
 }
 
