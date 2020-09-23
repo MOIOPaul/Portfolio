@@ -176,9 +176,15 @@ h2{
     transition: 0.2s;
 }
 
+#btnNavArticle.actif{
+    visibility: visible;
+}
+
 #btnNavArticle.inactif{
+    visibility: hidden;
     z-index: -1;
     top: 40%;
+    height: 0%;
     opacity: 0;
     transition: 0.2s;
 }
