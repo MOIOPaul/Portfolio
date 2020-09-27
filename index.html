@@ -15,16 +15,9 @@
     <body>
       <div id="load" class="inactif">
           <img id="gifCharge" src="medias/chat-de-chargement-gif.gif" alt="chat de chargement"/>
-          <p>CHARGEMENT...</p>
+          <p>Si tu pense détenir la vérité pure dans ton coeur, sache que ta stupidité n'a jamais été aussi grande...</p>
+          <p>MIAOU !</p>
       </div>
-      
-        <script>
-            document.getElementById("load").className = "actif";
-            
-            window.addEventListener("load", function(){
-                document.getElementById("load").className = "inactif";
-            })
-        </script>
       
        <div id="bg-image"></div>
         <header>
@@ -1462,16 +1455,28 @@
                         case "Enter":
                             verification();
                             ferme();
+                            
+                            console.log("doublepd");
 
                             break;
+                        case "c":
+                            
+                            var cat = document.getElementById("load");
+                            
+                            if(cat.className == "inactif"){
+                                cat.className = "actif";
+                                console.log(cat);
+                            }else if(cat.className == "actif"){
+                                cat.className = "inactif";
+                            }
                     }
-
 
                 });
             </script>
         
         <footer>
             <p>Cr&eacute;ateur : Paul MOIO</p>
+            <p>Appuyer sur "C"</p>
         </footer>
           
     </body>
