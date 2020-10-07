@@ -7,7 +7,7 @@
        <meta name="author" content="MOIO"/>
        <meta name="keywords" content="Portefolio_MOIO-Paul"/>
        <meta name="description" content="PortFolio"/>
-       <link id="css" class="Jour" rel="stylesheet" href="css/styleJour.css">
+       <link id="css" class="Jour" rel="stylesheet" href="css/style.css">
        <link  href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
        <link rel="shortcut icon" href="medias/logo-picto-nav.png">
 
@@ -34,9 +34,6 @@
                    <li>
                        <div class="decoration"></div>
                    </li>
-                   <li>
-                       <a href="index.html#competences">Compétences</a>
-                   </li>
                </ul>
                
                <figure id="logo" class="notScroll">
@@ -48,6 +45,9 @@
                        <a href="javascript:void(0)" onclick="navEnTeteArticle()">Réalisations</a>
                        <ul id="btnNavArticle" class="inactif">
                            <li onclick="navEnTeteArticle();">
+                               <a href="index.html#galerie">Galerie</a>
+                           </li>
+                           <li onclick="navEnTeteArticle();">
                                <a href="index.html#article" class="inactif" onclick="nbNavArticle=0; clickNavArticle(); ">Audiovisuel</a>
                            </li>
                            <li onclick="navEnTeteArticle();">
@@ -55,9 +55,6 @@
                            </li>
                            <li onclick="navEnTeteArticle();">
                                <a href="index.html#article" class="inactif" onclick="nbNavArticle=2; clickNavArticle(); ">Musical</a>
-                           </li>
-                           <li onclick="navEnTeteArticle();">
-                               <a href="index.html#galerie">Galerie</a>
                            </li>
                        </ul>
                    </li>
@@ -136,47 +133,7 @@
                        <a href="https://www.linkedin.com/in/paul-moio-8a6bb51a3/" target="_blank"><img src="medias/Picto_Linkedin.png" alt="Pictogramme_Linkedin" /></a>
                    </li>
                </ul>
-               <ul id="jour-nuit">
-                   <li>
-                       <button id="bouton" onclick="JourNuit()"><img src="medias/Picto_Jour.png" alt="Pictogramme_mode-Jour" /></button>
-                   </li>
-               </ul>
-               
             </nav>
-            
-            <script>
-                css = document.getElementById("css");
-                compte = localStorage.getItem('compte');
-                
-                if (localStorage.getItem('compte') == undefined){
-                    localStorage.setItem('compte' , 'Jour');
-                }
-
-                   function JourNuit() {
-
-                       if(css.className == "Nuit"){
-                           css.href = "css/styleJour.css";
-                           css.className = "Jour";
-                           localStorage.setItem('compte','Jour');
-                       }
-
-                       else {
-                           css.href = "css/styleNuit.css";
-                           css.className = "Nuit";
-                           localStorage.setItem('compte','Nuit');
-                       }
-                   }
-
-                if (compte == "Jour"){
-                    css.href = "css/styleJour.css";
-                    css.className = "Jour";
-                }
-
-                else {
-                    css.href = "css/styleNuit.css";
-                    css.className = "Nuit";
-                }
-            </script>
             
             <!-- ===================== -->
             <!-- Section Présentation  -->
@@ -184,7 +141,7 @@
             
             <section id="presentation">
                
-                <h1 >
+                <h1 id="titrePrincipal">
                     <span class="lettre">M</span>
                     <span class="lettre">O</span>
                     <span class="lettre">I</span>
@@ -197,13 +154,271 @@
                 </h1>
                    
                 <p id="textPres">
-                    Je suis ce que l'on appelle souvent un créatif. Ce que j'aime faire dans la vie c'est créer toutes sortes de choses, que ce soit des images, des sites web, des vidéos, mais principalement des jeux vidéo. J'ai l'intention de créer un jeu vidéo et je mets tout en œuvre pour finaliser ce projet. Je suis actuellement en deuxième année de formation pour un DUT MMI (métier du multimédia et interne) à Saint-Dié-des-Vosges. Je suis un homme excentrique, travailleur et surtout, je suis très motivé à créer ce jeu vidéo que je conçois depuis 2 ans. La plupart des créations présentes sur ce site sont des visuels pour mon jeu vidéo et/ou des tableaux pour entraîner mes compétences. Je sais utiliser Photoshop, illustrateur, Indesign, aftereffect, Blender, Flstudio20, et unity. J'ai des capacités en HTML, CSS, Javascript, PHP, et Anglais. J'écris aussi actuellement un livre sur mon jeu vidéo en plus de son développement avant de le mettre en place grâce à une structure comme From Software.
+                    Je suis ce que l'on appelle souvent un créatif. Ce que j'aime faire dans la vie c'est créer toutes sortes de choses, que ce soit des images, des sites web, des vidéos, mais principalement des jeux vidéo. J'ai l'intention de créer un jeu vidéo et je mets tout en œuvre pour finaliser ce projet. Je suis actuellement en deuxième année de formation pour un DUT MMI (métier du multimédia et interne) à Saint-Dié-des-Vosges. Je suis un homme excentrique, travailleur et surtout, je suis très motivé à créer ce jeu vidéo que je conçois depuis 2 ans. La plupart des créations présentes sur ce site sont des visuels pour mon jeu vidéo et/ou des tableaux pour entraîner mes compétences. Je sais utiliser Photoshop, Illustrateur, Indesign, After Effect, Premier Pro, Blender, Flstudio20, et unity. J'ai des capacités en HTML, CSS, Javascript, PHP, et Anglais. J'écris aussi actuellement un livre sur mon jeu vidéo en plus de son développement avant de le mettre en place grâce à une structure comme From Software.
                 </p>
                 
                 <a id="cv" href="medias/Curriculum%20vitae%20MOIO_Paul.pdf" target="_blank">Télécharger mon CV</a>
             </section>
             
-
+            <!-- ===================== -->
+            <!-- Section Compétences   -->
+            <!-- ===================== -->
+            
+            <section id="competences">
+                
+                <h1>COMPÉTENCES</h1>
+                
+                <div id="containComps">
+                  
+                   <div class="comps">
+                        <svg class="circlesComps">
+                           <defs>
+                                <linearGradient id="gradientComps" x1="20%" y1="60%" x2="50%" y2="100%">
+                                  <stop offset="0%"/>
+                                  <stop offset="100%"/>
+                                </linearGradient>
+                            </defs>
+                            <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                            <circle class="progressCircles" r=52 cx="60" cy="60" stroke="url(#gradientComps)" stroke-dashoffset="calc(327 - (90 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">90%</p>
+                        <p class="nameComps">Photoshop</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (70 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">70%</p>
+                        <p class="nameComps">Écriture</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (60 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">60%</p>
+                        <p class="nameComps">Illustrator</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (60 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">60%</p>
+                        <p class="nameComps">Dessin</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (60 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">60%</p>
+                        <p class="nameComps">InDesign</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (40 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">45%</p>
+                        <p class="nameComps">HTML / CSS / JS / PHP / SQL</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (40 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">40%</p>
+                        <p class="nameComps">Premier Pro / After Effect</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (35 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">35%</p>
+                        <p class="nameComps">Anglais B1</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (30 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">30%</p>
+                        <p class="nameComps">FlStudio 20</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (20 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">20%</p>
+                        <p class="nameComps">Blender</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (15 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">15%</p>
+                        <p class="nameComps">Unity</p>
+                    </div>
+                    <div class="comps">
+                        <svg class="circlesComps">
+                                <circle class="fontProgressCircles" r=52 cx="60" cy="60"/>
+                                <circle class="progressCircles" r=52 cx="60" cy="60" stroke= "url(#gradientComps)" stroke-dashoffset="calc(327 - (15 / 100 * 327))"/>
+                        </svg>
+                        <p class="percentComps">15%</p>
+                        <p class="nameComps">Forge / coutèlerie</p>
+                    </div>
+                </div>
+                
+            </section>
+            
+            <!-- ===================== -->
+            <!-- Section Galerie       -->
+            <!-- ===================== -->
+            
+            <section id="galerie">
+               
+               <h1>GALERIE</h1>
+               
+               <div id="image">
+                        <figure onclick="cpt=32; Zoom();">
+                                <div class="imgOverlay"><h2>Flux de Lune</h2></div>
+                                <img class="imgZoom"  src="medias/Affiche-A4-flux-de-lune.png" alt="Flux de Lune"/>
+                        </figure>
+                        <figure onclick="cpt=31; Zoom();">
+                                <div class="imgOverlay"><h2>Nuit de lumière</h2></div>
+                                <img class="imgZoom"  src="medias/affiche-A3.png" alt="Nuit de lumière"/>
+                        </figure>
+                        <figure onclick="cpt=30; Zoom();">
+                                <div class="imgOverlay"><h2>Affiches Bloodborne</h2></div>
+                                <img class="imgZoom"  src="medias/Affiches-Bloodborne.png" alt="Affiches Bloodborne"/>
+                        </figure>
+                        <figure onclick="cpt=29; Zoom();">
+                                <div class="imgOverlay"><h2>Spawn</h2></div>
+                                <img class="imgZoom"  src="medias/Spawn.png" alt="Spawn"/>
+                        </figure>
+                        <figure onclick="cpt=28; Zoom();">
+                                <div class="imgOverlay"><h2>Set complet</h2></div>
+                                <img class="imgZoom"  src="medias/Set-complet.png" alt="Set complet"/>
+                        </figure>
+                        <figure onclick="cpt=27; Zoom();">
+                                <div class="imgOverlay"><h2>Sancrilegiis Prisma</h2></div>
+                                <img class="imgZoom"  src="medias/Sancrilegiis-prisma.png" alt="Sancrilegiis Prisma"/>
+                        </figure>
+                        <figure onclick="cpt=26; Zoom();">
+                                <div class="imgOverlay"><h2>Affiche Morphing</h2></div>
+                                <img class="imgZoom"  src="medias/affiche%20A3%20150ppp.png" alt="Affiche Morphing"/>
+                        </figure>
+                        <figure onclick="cpt=25; Zoom();">
+                                <div class="imgOverlay"><h2>Poster Morphing</h2></div>
+                                <img class="imgZoom"  src="medias/poster%20A4%20-%2072ppp.png" alt="Poster Morphing"/>
+                        </figure>
+                        <figure onclick="cpt=24; Zoom();">
+                                <div class="imgOverlay"><h2>Asel Mioky</h2></div>
+                                <img class="imgZoom"  src="medias/Elsa.png" alt="Asel Mioky"/>
+                        </figure>
+                        <figure onclick="cpt=23; Zoom();">
+                                <div class="imgOverlay"><h2>Les Trisitas</h2></div>
+                                <img class="imgZoom"  src="medias/Les%20Trisitas.png" alt="Les Trisitas"/>
+                        </figure>
+                        <figure onclick="cpt=22; Zoom();">
+                                <div class="imgOverlay"><h2>Lucemtis Mioky</h2></div>
+                                <img class="imgZoom"  src="medias/Lucemtis-M.png" alt="Lucemtis Mioky"/>
+                        </figure>
+                        <figure onclick="cpt=21; Zoom();">
+                                <div class="imgOverlay"><h2>Bannière</h2></div>
+                                <img class="imgZoom" src="medias/banni%C3%A8re.png" alt="Bannière"/>
+                        </figure>
+                       <figure onclick="cpt=20; Zoom();">
+                                <div class="imgOverlay"><h2>Limonth tehs</h2></div>
+                                <img class="imgZoom"  src="medias/Limonth_tehs.png" alt="Limonth tehs"/>
+                        </figure>
+                       <figure onclick="cpt=19; Zoom();">
+                                <div class="imgOverlay"><h2>Déscente de Lune</h2></div>
+                                <img class="imgZoom"  src="medias/Descente%20de%20Lune.png" alt="Déscente de Lune"/>
+                        </figure>
+                        <figure onclick="cpt=18; Zoom();">
+                                <div class="imgOverlay"><h2>Une nuit éternel</h2></div>
+                                <img class="imgZoom"  src="medias/Une%20nuit%20%C3%A9ternel.png" alt="Une nuit éternel"/>
+                        </figure>
+                        <figure onclick="cpt=17; Zoom();">
+                                <div class="imgOverlay"><h2>Aldion Aube pale</h2></div>
+                                <img class="imgZoom"  src="medias/Aldion-Aube-pale.png" alt="Aldion Aube pale"/>
+                        </figure>
+                        <figure onclick="cpt=16; Zoom();">
+                                <div class="imgOverlay"><h2>PinkShine</h2></div>
+                                <img class="imgZoom"  src="medias/PinkShine.png" alt="PinkShine"/>
+                        </figure>
+                        <figure onclick="cpt=15; Zoom();">
+                                <div class="imgOverlay"><h2>Edy</h2></div>
+                                <img class="imgZoom"  src="medias/Edy.png" alt="Edy"/>
+                        </figure>
+                        <figure class="portrait" onclick="cpt=14; Zoom();">
+                                <div class="imgOverlay"><h2>Masque</h2></div>
+                                <img class="imgZoom"  src="medias/Masque.png" alt="Masque"/>
+                        </figure>
+                        <figure onclick="cpt=13; Zoom();">
+                                <div class="imgOverlay"><h2>New City</h2></div>
+                                <img class="imgZoom"  src="medias/New%20city.png" alt="New City"/>
+                        </figure>
+                        <figure onclick="cpt=12; Zoom();">
+                                <div class="imgOverlay"><h2>Aldion Redmoon</h2></div>
+                                <img class="imgZoom"  src="medias/Aldion%20redmoon.png" alt="Aldion Redmoon"/>
+                        </figure>
+                        <figure onclick="cpt=11; Zoom();">
+                                <div class="imgOverlay"><h2>Aldion</h2></div>
+                                <img class="imgZoom"  src="medias/Aldion.png" alt="Aldion"/>
+                        </figure>
+                        <figure onclick="cpt=10; Zoom();">
+                                <div class="imgOverlay"><h2>Erebor</h2></div>
+                                <img class="imgZoom"  src="medias/Erebor.png" alt="Erebor"/>
+                        </figure>
+                        <figure onclick="cpt=9;Zoom();">
+                                <div class="imgOverlay"><h2>Eptus</h2></div>
+                                <img class="imgZoom"  src="medias/Eptus.png" alt="Eptus"/>
+                        </figure>
+                        <figure onclick="cpt=8; Zoom();">
+                               <div class="imgOverlay"><h2>Pomme</h2></div>
+                                <img class="imgZoom"  src="medias/Pomme.png" alt="Pomme"/>
+                        </figure>
+                        <figure onclick="cpt=7; Zoom();">
+                                <div class="imgOverlay"><h2>Proxima</h2></div>
+                                <img class="imgZoom"  src="medias/Proxima.png" alt="Proxima"/>
+                        </figure>
+                        <figure onclick="cpt=6; Zoom();">
+                                <div class="imgOverlay"><h2>Grande tour</h2></div>
+                                <img class="imgZoom"  src="medias/Grande%20tour.png" alt="Grande tour"/>
+                        </figure>
+                        <figure onclick="cpt=5; Zoom();">
+                                <div class="imgOverlay"><h2>Bibliothécaire</h2></div>
+                                <img class="imgZoom"  src="medias/Biblioth%C3%A9caire.png" alt="Bibliothécaire"/>
+                        </figure>
+                        <figure onclick="cpt=4; Zoom();">
+                                <div class="imgOverlay"><h2>Upsidre</h2></div>
+                                <img class="imgZoom"  src="medias/Upsidre.png" alt="Upsidre"/>
+                        </figure>
+                        <figure onclick="cpt=3; Zoom();">
+                                <div class="imgOverlay"><h2>Velssios</h2></div>
+                                <img class="imgZoom"  src="medias/Velssios.png" alt="Velssios"/>
+                        </figure>
+                        <figure onclick="cpt=2; Zoom();" >
+                                <div class="imgOverlay"><h2>Steliom</h2></div>
+                                <img class="imgZoom" src="medias/Steliom.png" alt="Steliom"/>
+                        </figure>
+                        <figure onclick="cpt=1; Zoom();">
+                                <div class="imgOverlay"><h2>Ville de nuit</h2></div>
+                                <img class="imgZoom"  src="medias/Ville%20de%20nuit.png" alt="Ville de nuit"/>
+                        </figure>
+                        <figure onclick="cpt=0; Zoom();">
+                                <div class="imgOverlay"><h2>L'ancien Professeur</h2></div>
+                                <img class="imgZoom"  src="medias/L'ancien%20Professeur.png" alt="L'ancien Professeur"/>
+                        </figure>
+                </div>
+            </section>
             
             <!-- ===================== -->
             <!-- Section Article       -->
@@ -344,15 +559,84 @@
                 
                 <section id="imageDt" class="sectionVisible">
                 
-                <article id="artcImg29" class="impair ">
+                <article id="artcImg32" class="pair ">
+                       <figure class="pair nuit paysage" onclick="cpt=32; Zoom();">
+                           <div class="imgOverlay"><h2>Flux de Lune</h2></div>
+                           <img src="medias/Affiche-A4-flux-de-lune.png" alt="Flux de Lune"/>
+                        </figure>
+
+                        <div class="pair">
+                            <h2>Flux de Lune</h2>
+                            <p>
+                                
+                            </p>
+                            <h3>détails</h3>
+                            <ul>
+                                <li>Dimensions : 1920 x 1017 pixels</li>
+                                <li>Technique : Photoshop et Minecraft</li>
+                                <li>Type : tableau</li>
+                                <li>Date : 20/09/2020</li>
+                            </ul>
+                        </div>
+
+                </article>
+                
+                <article id="artcImg31" class="impair ">
+                       <figure class="impair nuit paysage" onclick="cpt=31; Zoom();">
+                           <div class="imgOverlay"><h2>Nuit de lumière</h2></div>
+                           <img src="medias/affiche-A3.png" alt="Nuit de lumière"/>
+                       </figure>
+
+                        <div class="impair">
+                            <h2>Nuit de lumière</h2>
+                            <p>
+                                
+                            </p>
+                            <h3>détails</h3>
+                            <ul>
+                                <li>Dimensions : 3310 x 2848 pixels</li>
+                                <li>Technique : Photo, Photoshop, forge et coutèlerie</li>
+                                <li>Type : tableau</li>
+                                <li>Date : 10/09/2020</li>
+                            </ul>
+                        </div>
+
+                  </article>
+
+                    <div id="plusImg" class="cacher">
+                      
+                       <article id="artcImg30" class="pair ">
+                       <figure class="pair nuit paysage" onclick="cpt=30; Zoom();">
+                           <div class="imgOverlay"><h2>Affiches Bloodborne</h2></div>
+                           <img src="medias/Affiches-Bloodborne.png" alt="Affiches Bloodborne"/>
+                       </figure>
+
+                        <div class="pair">
+                            <h2>Affiches Bloodborne</h2>
+                            <p>
+                                Ces deux affiches ont été créé pour un travail demandé à propos de jeux-vidéos.
+                            </p>
+                            <h3>détails</h3>
+                            <ul>
+                                <li>Dimensions : 3310 x 2848 pixels</li>
+                                <li>Technique : Photo, Photoshop, forge et coutèlerie</li>
+                                <li>Type : tableau</li>
+                                <li>Date : 10/09/2020</li>
+                            </ul>
+                        </div>
+
+                  </article>
+                      
+                       <article id="artcImg29" class="impair ">
                        <figure class="impair nuit paysage" onclick="cpt=29; Zoom();">
+                           <div class="imgOverlay"><h2>Spawn</h2></div>
                            <img src="medias/Spawn.png" alt="Spawn"/>
                         </figure>
 
                         <div class="impair">
                             <h2>Spawn</h2>
                             <p>
-                                Voici la représentation d'un spawn crée pour un serveur Minecraft. Malheureusement après une fermeture du serveur en question, la map a été perdu. Pour rendre hommage à une de mes créations oubliées, j'ai décidé d'en faire un tableau représentatif avec une photo que j'ai pu prendre à la fin de la construction. Les couleurs du spawn sont très puissantes visuellement car le serveur Minecraft était un serveur de mini-jeux. C'est pourquoi j'ai voulu conserver cette puissance avec un tableau très coloré.
+                                Voici la représentation d'un spawn créé pour un serveur Minecraft. Malheureusement après une fermeture du serveur en question, la map a été perdu. Pour rendre hommage à une de mes créations oubliées, j'ai décidé d'en faire un tableau représentatif avec une photo que j'ai pu prendre à la fin de la construction. Les couleurs du spawn sont très puissantes visuellement car le serveur Minecraft était un serveur de mini-jeux. C'est pourquoi j'ai voulu conserver cette puissance avec un tableau très coloré.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -367,13 +651,14 @@
                 
                 <article id="artcImg28" class="pair ">
                        <figure class="pair jour paysage" onclick="cpt=28; Zoom();">
+                           <div class="imgOverlay"><h2>Set complet</h2></div>
                            <img src="medias/Set-complet.png" alt="Set complet"/>
                        </figure>
 
                         <div class="pair">
                             <h2>Set complet</h2>
                             <p>
-                                Voici le set complet construit à la main pour le début du Pr.Mioky. Ce set comprend son arme fétiche, le Kusarigama. La version de ce Kusarigama a été pensé pour être utilisé en combat et en survie. Sa forme particulière et très différente des Kusarigama habituel lui confère une grande polyvalence en tant qu'arme. Le masque quant à lui est composé de verre de protection et d'un alliage en aluminium. Cette composition a déjà été décrit dans le tableau Lucemtis Mioky, car ce masque en est la pièce maitresse.
+                                Voici le set complet construit à la main pour le début du Pr.Mioky. Ce set comprend son arme fétiche, le Kusarigama. La version de ce Kusarigama a été pensé pour être utilisé en combat et en survie. Sa forme particulière et très différente des Kusarigama habituel, ce qui lui confère une grande polyvalence en tant qu'arme. Le masque quant à lui est composé de verres de protection et d'un alliage en aluminium. Cette composition a déjà été décrit dans le tableau Lucemtis Mioky, car ce masque en est la pièce maitresse.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -386,10 +671,9 @@
 
                   </article>
 
-                    <div id="plusImg" class="cacher">
-
                       <article id="artcImg27" class="impair ">
                        <figure class="impair nuit portrait" onclick="cpt=27; Zoom();">
+                           <div class="imgOverlay"><h2>Sancrilegiis Prisma</h2></div>
                            <img src="medias/Sancrilegiis-prisma.png" alt="Sancrilegiis Prisma"/>
                         </figure>
 
@@ -411,13 +695,14 @@
                 
                 <article id="artcImg26" class="pair ">
                        <figure class="pair nuit paysage" onclick="cpt=26; Zoom();">
+                           <div class="imgOverlay"><h2>Affiche Morphing</h2></div>
                            <img src="medias/affiche%20A3%20150ppp.png" alt="Affiche Morphing"/>
                        </figure>
 
                         <div class="pair">
                             <h2>Affiche Morphing</h2>
                             <p>
-                                Cette affiche du jeu Morphing est un visuel créer spécialement pour les acheteurs. Bien que celà ne reflette aucune scène du jeu, cela représente bien l'univers graphique. Celui-ci étant à la fois chaud et froid, l'affiche montre seulemetn de côté chaud du jeu. Cette image est aussi une représentation du personnage principal qui se tient au côté de son ami qui le suit durant le jeu. Cette image est donc une création qui montre le monde de Morphing à travers une texture plus réaliste mais qui reste fidèle à l'oeuvre et au monde dans laquel elle a été créer.
+                                Cette affiche du jeu Morphing est un visuel créé spécialement pour les acheteurs. Bien que cela ne reflète aucune scène du jeu, cela représente bien l'univers graphique. Celui-ci étant à la fois chaud et froid, l'affiche montre seulement le côté chaud du jeu. Cette image est aussi une représentation du personnage principal qui se tient au côté de son ami qui le suit durant le jeu. Cette image est donc une création qui montre le monde de Morphing à travers une texture plus réaliste mais qui reste fidèle à l'œuvre et au monde dans là quel elle a été créé.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -432,13 +717,14 @@
                       
                        <article id="artcImg25" class="impair ">
                        <figure class="impair nuit portrait" onclick="cpt=25; Zoom();">
+                           <div class="imgOverlay"><h2>Poster Morphing</h2></div>
                            <img src="medias/poster%20A4%20-%2072ppp.png" alt="Poster Morphing"/>
                         </figure>
 
                         <div class="impair">
                             <h2>Poster Morphing</h2>
                             <p>
-                                Morphing est un jeux-vidéos créer durant mes années universitaire. Ce projet à était créer avec 5 personnes. J'ai était charger de toute la partie graphique du projet, d'où ce poster du jeu. Le poster montre le personnage principal du jeux dans l'une des pièces capital du jeux. Cette composition avait pour but d'être vendu aux acheteur du jeu comme supplement pour ceux qui précomander le jeu.
+                                Morphing est un jeu vidéo créé durant mes années universitaires. Ce projet a été créé avec 5 personnes. J'ai été chargé de toute la partie graphique du projet, d'où ce poster du jeu. Le poster montre le personnage principal du jeu dans l'une des pièces capitales du jeu. Cette composition a pour but d'être vendu aux acheteurs du jeu comme supplément pour ceux qui précommande le jeu.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -453,13 +739,14 @@
                 
                  <article id="artcImg24" class="pair ">
                        <figure class="pair jour portrait" onclick="cpt=24; Zoom();">
+                           <div class="imgOverlay"><h2>Asel Mioky</h2></div>
                            <img src="medias/Elsa.png" alt="Asel Mioky"/>
                        </figure>
 
                         <div class="pair">
                             <h2>Asel Mioky</h2>
                             <p>
-                                Ce tableau est une représentation d'un être cher au professeur Mioky. Un être qui avant tout est une femme qui à toujours était présente dans la vie du professeur. Elle qui est la mère de 4 de ses enfants. Dont malheuresement 2 sont morts. Et bien qu'aujourd'hui elle fait face à une double vie, elle à toujours était le plus grands remparts contre la folie du professeur. Et ses qualité à elle seul sont le reflets d'un des ésprits créatif les plus forts et les plus influant de tous les temps.
+                                Ce tableau est une représentation d'un être cher au professeur Mioky. Un être qui avant tout est une femme qui a toujours été présente dans la vie du professeur. Elle qui est la mère de 4 de ses enfants. Dont malheureusement 2 sont morts. Et bien qu'aujourd'hui elle fait face à une double vie, elle a toujours été le plus grand rempart contre la folie du professeur. Et ses qualités à elle seule sont les reflets d'un des esprits créatif les plus forts et les plus influents de tous les temps.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -474,13 +761,14 @@
                   
                   <article id="artcImg23" class="impair ">
                        <figure class="impair nuit portrait" onclick="cpt=23; Zoom();">
+                           <div class="imgOverlay"><h2>Les Trisitas</h2></div>
                            <img src="medias/Les%20Trisitas.png" alt="Les Trisitas"/>
                         </figure>
 
                         <div class="impair">
                             <h2>Les Trisitas</h2>
                             <p>
-                                Les inquisiteurs de la ville ont toujours été présent, même après l'arrivé du Pr.Mioky, ils ont toujours été la voix du jugement. Pour eux peut importe comment se comporte le monde autour d'eux, leurs seul et unique but est la justice et la vérité. Ces créatures sont à la base de simples humains qui vivaient dans la ville basse et qui regarder tous les jours l'injustice du monde. Ils se sont rencontré et on fini par devenir une seul et même entité qui porte la voix de la justice.
+                                Les inquisiteurs de la ville ont toujours été présents, même après l'arrivée du Pr. Mioky, ils ont toujours été la voix du jugement. Pour eux peu importe comment se comporte le monde autour d'eux, leur seul et unique but est la justice et la vérité. Ces créatures sont à la base de simples humains qui vivaient dans la ville basse et qui regardaient tous les jours l'injustice du monde. Ils se sont rencontrés et on finit par devenir une seule et même entité qui porte la voix de la justice.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -495,13 +783,14 @@
                   
                   <article id="artcImg22" class="pair ">
                        <figure class="pair nuit portrait" onclick="cpt=22; Zoom();">
+                           <div class="imgOverlay"><h2>Lucemtis Mioky</h2></div>
                            <img src="medias/Lucemtis-M.png" alt="Lucemtis Mioky"/>
                        </figure>
 
                         <div class="pair">
                             <h2>Lucemtis Mioky</h2>
                             <p>
-                                La vision psychotique du professeur Mioky. Voici l'ancien visage de notre cher professeur. Le visage d'un homme qui à pour ombre la mort et le sang de millions de personnes. Cette photos est la vision de l'homme qui a défier les dieux anciens pour se battre contre son destin. Le visage d'un démon qui est prêt à prendre la vie à quiconque oserai se mettre en travers de son chemin. Le masque forgé de fer et la représentation du visage du professeur sous sa forme la plus primal. Un homme intelligent qui ne montre aucune émotions de par ses yeux et d'où sa bouche ne reste plus qu'un vide sombre absorbant l'entièreté des créature qui peuples le reste de son monde.
+                                La vision psychotique du professeur Mioky. Voici l'ancien visage de notre cher professeur. Le visage d'un homme qui a pour ombre la mort et le sang de millions de personnes. Cette photo est la vision de l'homme qui a défié les dieux anciens pour se battre contre son destin. Le visage d'un démon qui est prêt à prendre la vie à quiconque oserait se mettre en travers de son chemin. Le masque forgé de fer est la représentation du visage du professeur sous sa forme la plus primale. Un homme intelligent qui ne montre aucune émotion de par ses yeux, et de sa bouche ne reste plus qu'un vide sombre absorbant l'entièreté des créatures qui peuples le reste de son monde.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -516,13 +805,14 @@
                   
                    <article id="artcImg21" class="impair ">
                        <figure class="impair nuit paysage" onclick="cpt=21; Zoom();">
+                           <div class="imgOverlay"><h2>Bannière</h2></div>
                            <img src="medias/banni%C3%A8re.png" alt="Bannière"/>
                         </figure>
 
                         <div class="impair">
                             <h2>Bannière</h2>
                             <p>
-                                Voici la bannière de mes réseaux sociaux. Dans le fond nous pouvons voir un tableau que j'ai déjà réaliser, New city. J'ai choisi cette image de fond pour sa beauté et sa représentation forte de la palette graphique que j'affectionne. De plus Mon pseudonyme Lucemtis Mioky est présent avec un style graphique propre et qui montre que dans mon univers je suis le centre et aussi celui qui créer absolument tout que ce soit le fond, la forme, les couleurs, et les idées.
+                                Voici la bannière de mes réseaux sociaux. Dans le fond nous pouvons voir un tableau que j'ai déjà réalisé, New city. J'ai choisi cette image de fond pour sa beauté et sa représentation forte de la palette graphique que j'affectionne. De plus Mon pseudonyme Lucemtis Mioky est présent avec un style graphique propre et qui montre que dans mon univers je suis le centre et aussi celui qui créait absolument tout que ce soit le fond, la forme, les couleurs, et les idées.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -537,13 +827,14 @@
                   
                    <article id="artcImg20" class="pair ">
                        <figure class="pair nuit paysage" onclick="cpt=20; Zoom();">
+                           <div class="imgOverlay"><h2>Limonth tehs</h2></div>
                            <img src="medias/Limonth_tehs.png" alt="Limonth tehs"/>
                         </figure>
 
                         <div class="pair">
                             <h2>Limonth tehs</h2>
                             <p>
-                                J'ai conçue ce visuel durant un stage en entreprise chez Sleak Tv. Durant ce stage mon but était l'observation des locaux et de l'entreprise. Ceux-ci mon permis la création de ce tableau durant une journée. Les trois monstres sont des créatures présentes dans les abyss d'un monde sans lumière. L'homme qui est au centre de la scène c'est retrouver malgré lui piégé par les trois créatures. Celui ci avait pour but de fuir c'est créature sans être remarquer. Malheuresement pour lui, le vide du terrain n'étant pas à son avantage, il ce fit remarquer par les trois créatures qui le pointe de leur regard persant. Soutenir le regarde ces trois créature, c'est soutenir le regard de la vérité. La vérité sur les abyss et la vérité sur sa propre présence en se monde.
+                                J'ai conçu ce visuel durant un stage en entreprise chez Sleak TV. Durant ce stage mon but était l'observation des locaux et de l'entreprise. Ceux-ci m'ont permis la création de ce tableau durant une journée. Les trois monstres sont des créatures présentes dans les abysses d'un monde sans lumière. L'homme qui est au centre de la scène s'est retrouvé malgré lui piéger par les trois créatures. Celui-ci avait pour but de fuir ces créatures sans être remarqué. Malheureusement pour lui, le vide du terrain n'étant pas à son avantage, il se fit remarquer par les trois créatures qui le pointe de leur regard perçant. Soutenir le regard de ces trois créatures, c'est soutenir le regard de la vérité. La vérité sur les abysses et la vérité sur sa propre présence en ce monde.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -558,6 +849,7 @@
                    
                     <article id="artcImg19" class="impair ">
                        <figure class="impair nuit paysage" onclick="cpt=19; Zoom();">
+                           <div class="imgOverlay"><h2>Déscente de Lune</h2></div>
                            <img src="medias/Descente%20de%20Lune.png" alt="Déscente de Lune"/>
                        </figure>
 
@@ -579,13 +871,14 @@
 
                     <article id="artcImg18" class="pair">
                         <figure class="pair nuit paysage" onclick="cpt=18; Zoom();">
+                           <div class="imgOverlay"><h2>Une nuit éternel</h2></div>
                            <img src="medias/Une%20nuit%20%C3%A9ternel.png" alt="Une nuit éternel"/>
                         </figure>
 
                         <div class="pair">
                             <h2>Une nuit éternel</h2>
                             <p>
-                                Une nuit éternelle est un titre mais aussi une description de cette œuvre. Ce tableau montre deux personnes dans les montagnes qui fixe la Lune bleu. C'est un moment capturé dans l’imaginaire pour que cette nuit ne finisse jamais. La nuit sera toujours présente tant que les deux voyageurs voudront continuer à la contempler. La Lune qui nimbe cette Voie Lactée  bleuté est la reine de cette nuit qui fait danser les étoiles dans un grand bal. Les deux voyageurs qui regardent ce spectacle sont présents pour vivre un moment unique et célèbre leur amour en même temps que la nuit célèbre la protection de la Lune.
+                                Une nuit éternelle est un titre mais aussi une description de cette œuvre. Ce tableau montre deux personnes dans les montagnes qui fixe la Lune bleu. C'est un moment capturé dans l’imaginaire pour que cette nuit ne finisse jamais. La nuit sera toujours présente tant que les deux voyageurs voudront continuer à la contempler. La Lune qui nimbe la Voie Lactée  bleuté est la reine de cette nuit qui fait danser les étoiles dans un grand bal. Les deux voyageurs qui regardent ce spectacle sont présents pour vivre un moment unique et célèbre leur amour en même temps que la nuit célèbre la protection de la Lune.
                             </p>
                             <h3>détails</h3>
                             <ul>
@@ -599,6 +892,7 @@
                        
                         <article id="artcImg17" class="impair">
                             <figure class="impair jour paysage" onclick="cpt=17; Zoom();">
+                               <div class="imgOverlay"><h2>Aldion Aube pale</h2></div>
                                <img src="medias/Aldion-Aube-pale.png" alt="Aldion Aube pale"/>
                             </figure>
 
@@ -619,6 +913,7 @@
 
                         <article id="artcImg16" class="pair ">
                            <figure class="pair nuit paysage" onclick="cpt=16; Zoom();">
+                               <div class="imgOverlay"><h2>PinkShine</h2></div>
                                <img src="medias/PinkShine.png" alt="PinkShine"/>
                            </figure>
 
@@ -640,6 +935,7 @@
 
                         <article id="artcImg15" class="impair">
                             <figure class="impair jour paysage" onclick="cpt=15; Zoom();">
+                               <div class="imgOverlay"><h2>Edy</h2></div>
                                <img src="medias/Edy.png" alt="Edy"/>
                             </figure>
 
@@ -660,6 +956,7 @@
 
                         <article id="artcImg14" class="pair ">
                            <figure class="pair jour portrait" onclick="cpt=14; Zoom();">
+                               <div class="imgOverlay"><h2>Masque</h2></div>
                                <img src="medias/Masque.png" alt="Masque"/>
                            </figure>
 
@@ -681,6 +978,7 @@
 
                         <article id="artcImg13" class="impair">
                             <figure class="impair nuit paysage" onclick="cpt=13; Zoom();">
+                               <div class="imgOverlay"><h2>New City</h2></div>
                                <img src="medias/New%20city.png" alt="New City"/>
                             </figure>
 
@@ -701,6 +999,7 @@
 
                         <article id="artcImg12" class="pair">
                             <figure class="pair nuit paysage" onclick="cpt=12; Zoom();">
+                               <div class="imgOverlay"><h2>Aldion Redmoon</h2></div>
                                <img src="medias/Aldion%20redmoon.png" alt="Aldion Redmoon"/>
                             </figure>
 
@@ -721,6 +1020,7 @@
 
                         <article id="artcImg11" class="impair">
                            <figure class="impair nuit paysage" onclick="cpt=11; Zoom();">
+                               <div class="imgOverlay"><h2>Aldion</h2></div>
                                <img src="medias/Aldion.png" alt="Aldion"/>
                            </figure>
 
@@ -742,6 +1042,7 @@
 
                         <article id="artcImg10" class="pair">
                             <figure class="pair jour paysage" onclick="cpt=10; Zoom();">
+                               <div class="imgOverlay"><h2>Erebor</h2></div>
                                <img src="medias/Erebor.png" alt="Erebor"/>
                             </figure>
 
@@ -762,6 +1063,7 @@
 
                         <article id="artcImg9" class="impair">
                            <figure class="impair jour portrait" onclick="cpt=9; Zoom();">
+                               <div class="imgOverlay"><h2>Eptus</h2></div>
                                <img src="medias/Eptus.png" alt="Eptus"/>
                            </figure>
 
@@ -783,6 +1085,7 @@
 
                         <article id="artcImg8" class="pair">
                             <figure class="pair jour paysage" onclick="cpt=8; Zoom();">
+                               <div class="imgOverlay"><h2>Pomme</h2></div>
                                <img src="medias/Pomme.png" alt="Pomme"/>
                             </figure>
 
@@ -803,6 +1106,7 @@
 
                         <article id="artcImg7" class="impair">
                             <figure class="impair jour paysage" onclick="cpt=7; Zoom();">
+                               <div class="imgOverlay"><h2>Proxima</h2></div>
                                <img src="medias/Proxima.png" alt="Proxima"/>
                             </figure>
 
@@ -823,6 +1127,7 @@
 
                         <article id="artcImg6" class="pair ">
                            <figure class="pair jour portrait" onclick="cpt=6; Zoom();">
+                               <div class="imgOverlay"><h2>Grande tour</h2></div>
                                <img src="medias/Grande%20tour.png" alt="Grande tour"/>
                            </figure>
 
@@ -844,6 +1149,7 @@
 
                         <article id="artcImg5" class="impair">
                             <figure class="impair jour portrait" onclick="cpt=5; Zoom();">
+                               <div class="imgOverlay"><h2>Bibliothécaire</h2></div>
                                <img src="medias/Biblioth%C3%A9caire.png" alt="Bibliothécaire"/>
                             </figure>
 
@@ -864,6 +1170,7 @@
 
                         <article id="artcImg4" class="pair ">
                            <figure class="pair jour portrait" onclick="cpt=4; Zoom();">
+                               <div class="imgOverlay"><h2>Upsidre</h2></div>
                                <img src="medias/Upsidre.png" alt="Upsidre"/>
                            </figure>
 
@@ -885,6 +1192,7 @@
 
                         <article id="artcImg3" class="impair">
                             <figure class="impair jour paysage" onclick="cpt=3; Zoom();">
+                               <div class="imgOverlay"><h2>Velssios</h2></div>
                                <img src="medias/Velssios.png" alt="Velssios"/>
                             </figure>
 
@@ -905,6 +1213,7 @@
 
                         <article id="artcImg2" class="pair">
                             <figure class="pair jour portrait" onclick="cpt=2; Zoom();">
+                               <div class="imgOverlay"><h2>Steliom</h2></div>
                                <img src="medias/Steliom.png" alt="Steliom"/>
                             </figure>
 
@@ -925,13 +1234,14 @@
 
                         <article id="artcImg1" class="impair">
                             <figure class="impair nuit portrait" onclick="cpt=1; Zoom();">
+                               <div class="imgOverlay"><h2>Ville de nuit</h2></div>
                                <img src="medias/Ville%20de%20nuit.png" alt="Ville de nuit"/>
                             </figure>
 
                             <div class="impair">
                                 <h2>Ville de nuit</h2>
                                 <p>
-                                    Ce tableau représente une ville du 22ème siècle. Elle est montrée durant la nuit avec la magnifique Lune qui est pourtant presque absorbée par les lumières et buildings qui cachent le ciel. Cette ville est tellement évoluée que la plupart de ses habitants sont ce que l’on appelle des "mutants". Ils vivent dans une ville qui est le berceau des innovations génétique. Cette représentation a été peinte pour la création d’un ancien jeu Lockedup, qui au fil du temps a laissé place au jeu Eptus. Cette ville est une représentation de l’univers dans lequel Lockedup prenait place. Avec des grandes avancé dans la génétique et le transhumanisme.
+                                    Ce tableau représente une ville du 22e siècle. Elle est montrée durant la nuit avec la magnifique Lune qui est pourtant presque absorbée par les lumières et buildings qui cachent le ciel. Cette ville est tellement évoluée que la plupart de ses habitants sont ce que l’on appelle des "mutants". Ils vivent dans une ville qui est le berceau des innovations génétique. Cette représentation a été peinte pour la création d’un ancien jeu Lockedup, qui au fil du temps a laissé place au jeu Eptus. Cette ville est une représentation de l’univers dans lequel Lockedup prenait place. Avec des grandes avancé dans la génétique et le transhumanisme.
                                 </p>
                                 <h3>détails</h3>
                                 <ul>
@@ -945,6 +1255,7 @@
 
                         <article id="artcImg0" class="pair">
                             <figure class="pair jour portrait" onclick="cpt=0; Zoom();">
+                               <div class="imgOverlay"><h2>L'ancien Professeur</h2></div>
                                <img src="medias/L'ancien%20Professeur.png" alt="L'ancien Professeur"/>
                             </figure>
 
@@ -1163,109 +1474,6 @@
             </script>
             
             <!-- ===================== -->
-            <!-- Section Galerie       -->
-            <!-- ===================== -->
-            
-            <section id="galerie">
-               
-               <h1>GALERIE</h1>
-               
-               <div id="image">
-                   
-                   <figure class="paysage" onclick="cpt=29; Zoom();">
-                            <img class="imgZoom"  src="medias/Spawn.png" alt="Spawn"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=28; Zoom();">
-                            <img class="imgZoom"  src="medias/Set-complet.png" alt="Set complet"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=27; Zoom();">
-                            <img class="imgZoom"  src="medias/Sancrilegiis-prisma.png" alt="Sancrilegiis Prisma"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=26; Zoom();">
-                            <img class="imgZoom"  src="medias/affiche%20A3%20150ppp.png" alt="Affiche Morphing"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=25; Zoom();">
-                            <img class="imgZoom"  src="medias/poster%20A4%20-%2072ppp.png" alt="Poster Morphing"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=24; Zoom();">
-                            <img class="imgZoom"  src="medias/Elsa.png" alt="Asel Mioky"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=23; Zoom();">
-                            <img class="imgZoom"  src="medias/Les%20Trisitas.png" alt="Les Trisitas"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=22; Zoom();">
-                            <img class="imgZoom"  src="medias/Lucemtis-M.png" alt="Lucemtis Mioky"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=21; Zoom();">
-                            <img class="imgZoom" src="medias/banni%C3%A8re.png" alt="Bannière"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=20; Zoom();">
-                            <img class="imgZoom"  src="medias/Limonth_tehs.png" alt="Limonth tehs"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=19; Zoom();">
-                            <img class="imgZoom"  src="medias/Descente%20de%20Lune.png" alt="Déscente de Lune"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=18; Zoom();">
-                            <img class="imgZoom"  src="medias/Une%20nuit%20%C3%A9ternel.png" alt="Une nuit éternel"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=17; Zoom();">
-                            <img class="imgZoom"  src="medias/Aldion-Aube-pale.png" alt="Aldion Aube pale"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=16; Zoom();">
-                            <img class="imgZoom"  src="medias/PinkShine.png" alt="PinkShine"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=15; Zoom();">
-                            <img class="imgZoom"  src="medias/Edy.png" alt="Edy"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=14; Zoom();">
-                            <img class="imgZoom"  src="medias/Masque.png" alt="Masque"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=13; Zoom();">
-                            <img class="imgZoom"  src="medias/New%20city.png" alt="New City"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=12; Zoom();">
-                            <img class="imgZoom"  src="medias/Aldion%20redmoon.png" alt="Aldion Redmoon"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=11; Zoom();">
-                            <img class="imgZoom"  src="medias/Aldion.png" alt="Aldion"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=10; Zoom();">
-                            <img class="imgZoom"  src="medias/Erebor.png" alt="Erebor"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=9;Zoom();">
-                            <img class="imgZoom"  src="medias/Eptus.png" alt="Eptus"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=8; Zoom();">
-                            <img class="imgZoom"  src="medias/Pomme.png" alt="Pomme"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=7; Zoom();">
-                            <img class="imgZoom"  src="medias/Proxima.png" alt="Proxima"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=6; Zoom();">
-                            <img class="imgZoom"  src="medias/Grande%20tour.png" alt="Grande tour"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=5; Zoom();">
-                            <img class="imgZoom"  src="medias/Biblioth%C3%A9caire.png" alt="Bibliothécaire"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=4; Zoom();">
-                            <img class="imgZoom"  src="medias/Upsidre.png" alt="Upsidre"/>
-                    </figure>
-                    <figure class="paysage" onclick="cpt=3; Zoom();">
-                            <img class="imgZoom"  src="medias/Velssios.png" alt="Velssios"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=2; Zoom();" >
-                            <img class="imgZoom" src="medias/Steliom.png" alt="Steliom"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=1; Zoom();">
-                            <img class="imgZoom"  src="medias/Ville%20de%20nuit.png" alt="Ville de nuit"/>
-                    </figure>
-                    <figure class="portrait" onclick="cpt=0; Zoom();">
-                            <img class="imgZoom"  src="medias/L'ancien%20Professeur.png" alt="L'ancien Professeur"/>
-                    </figure>
-                </div>
-            </section>
-            
-            <!-- ===================== -->
             <!-- Section conact        -->
             <!-- ===================== -->
             
@@ -1476,7 +1684,7 @@
         
         <footer>
             <p>Cr&eacute;ateur : Paul MOIO</p>
-            <p>Appuyer sur "C"</p>
+            <p>Appuyé sur la touche "c"</p>
         </footer>
           
     </body>
