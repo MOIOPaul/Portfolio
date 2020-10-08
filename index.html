@@ -79,26 +79,28 @@
                 window.onscroll = function() {Scroll()};
 
                     function Scroll() {
+                        
+                        if(1080 > window.innerWidth){
+                            var scrolling = document.documentElement.scrollTop;
 
-                        var scrolling = document.documentElement.scrollTop;
+                            if (lastScroll > scrolling && scrolling > 40) {
+                                document.getElementById("navEnTete").className = "scroll";
+                                document.getElementById("logo").className = "scroll";
 
-                        if (lastScroll > scrolling && scrolling > 40) {
-                            document.getElementById("navEnTete").className = "scroll";
-                            document.getElementById("logo").className = "scroll";
+                            }
 
+                            else if(scrolling < 40){
+                                document.getElementById("navEnTete").className = "notScroll";
+                                document.getElementById("logo").className = "notScroll";
+                            }
+
+                            else if(lastScroll < scrolling){
+                                document.getElementById("navEnTete").className = "hidenScroll";
+                                document.getElementById("logo").className = "hidenScroll";
+                            }
+
+                            lastScroll = scrolling;
                         }
-
-                        else if(scrolling < 40){
-                            document.getElementById("navEnTete").className = "notScroll";
-                            document.getElementById("logo").className = "notScroll";
-                        }
-
-                        else if(lastScroll < scrolling){
-                            document.getElementById("navEnTete").className = "hidenScroll";
-                            document.getElementById("logo").className = "hidenScroll";
-                        }
-
-                        lastScroll = scrolling;
 
                     }
             </script>
