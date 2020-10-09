@@ -862,7 +862,7 @@ footer p{
         transition: 0.1s;
     }
     
-    @media screen and (min-height: 921px){
+    @media screen and (min-height: 911px){
     
         /* =========================================== */
         /* BARRE DE NAVIGATION RESEAU                  */
@@ -873,7 +873,7 @@ footer p{
             position: fixed;
             column-count: 3;
             left: 0px;
-            bottom: 20px;
+            bottom: 10px;
             width: 300px;
             background-color: rgba(0, 0, 0, 0.2);
         }
@@ -893,7 +893,7 @@ footer p{
         }
     }
     
-    @media screen and (max-height: 920px){
+    @media screen and (max-height: 910px){
         /* =========================================== */
         /* BARRE DE NAVIGATION RESEAU                  */
         /* =========================================== */
