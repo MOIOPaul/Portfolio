@@ -178,27 +178,6 @@ h2{
 }
 
 /* =========================================== */
-/* BARRE DE NAVIGATION RESEAU                  */
-/* =========================================== */
-
-#navReseau {
-    z-index: 2;
-    position: fixed;
-    display: flex;
-    right: 0px;
-    bottom: 0px;
-    flex-direction: column;
-    border-radius: 20px 0px 0px 20px;
-    background-color: rgba(5, 5, 5, 0.6);
-}
-
-#reseau li a img{
-    margin: auto;
-    width: 20px;
-    height: 20px;
-}
-
-/* =========================================== */
 /* BOUTON DE NAVIGATION & IMAGES               */
 /* =========================================== */
 
@@ -488,7 +467,7 @@ span.espace{
 }
 
 stop:nth-child(1){
-    stop-color: #cb317d;
+    stop-color: rgba(255, 38, 123, 1);
 }
 
 stop:nth-child(2){
@@ -803,13 +782,171 @@ footer p{
         transition: 0.2s;
     }
     
+/* --------------------------------------------------------- */
     
+    #titleNav{
+        display: block;
+        text-align: center;
+    }
+    
+    #nameNav{
+        margin-top: 240px;
+    }
+    
+    #secondTitleNav{
+        margin-top: 20px;
+        font-size: 0.9em;
+        
+    }
+    
+    #logo.scroll , #logo.notScroll , #logo.hidenScroll{
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        width: 200px;
+    }
+    
+    #logo.scroll a , #logo.notScroll a , #logo.hidenScroll a{
+        padding: 0px;
+    }
+    
+    #logo.scroll img , #logo.notScroll img , #logo.hidenScroll img{
+        width: 100%;
+    }
+    
+    #titleNav:hover , #logo.scroll a:hover , #logo.notScroll a:hover , #logo.hidenScroll a:hover{
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 0.8;
+        transition: 0.1s;
+    }
+    
+    #titleNav:active , #logo.scroll a:active img , #logo.notScroll a:active img , #logo.hidenScroll a:active img{
+        transform: scale(0.95);
+        transition: 0.1s;
+    }
+    
+/* --------------------------------------------------------- */    
+    
+    .scroll #produit , .notScroll #produit, .hidenScroll #produit{
+        margin-top: 30px;
+    }
+    
+    .scroll #utilisateur li:nth-child(1) , .notScroll #utilisateur li:nth-child(1) , .hidenScroll #utilisateur li:nth-child(1){
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .scroll #btnNavArticle.actif , .notScroll #btnNavArticle.actif , .hidenScroll #btnNavArticle.actif{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 0.6em;
+    }
+    
+    .scroll #btnNavArticle.inactif , .notScroll #btnNavArticle.inactif , .hidenScroll #btnNavArticle.inactif{
+        display: none;
+    }
+    
+    .scroll li , .notScroll li , .hidenScroll li{
+        font-size: 1.3em;
+    }
+    
+    .scroll a , .notScroll a , .hidenScroll a{
+        width: 100%;
+        padding: 8px 0px 8px 0px;
+    }
+    
+    .scroll a:hover , .notScroll a:hover , .hidenScroll a:hover{
+        background-color: rgba(255, 38, 123, 0.75);
+        opacity: 1;
+        transition: 0.1s;
+    }
+    
+    @media screen and (min-height: 941px){
+    
+        /* =========================================== */
+        /* BARRE DE NAVIGATION RESEAU                  */
+        /* =========================================== */
+
+        #navReseau {
+            z-index: 2;
+            position: fixed;
+            column-count: 3;
+            left: 0px;
+            bottom: 40px;
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        #reseau li a {
+            padding: 15px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+        }
+
+        #reseau li a img{
+            width: 30px;
+            height: 30px;
+        }
+    }
+    
+    @media screen and (max-height: 940px){
+        /* =========================================== */
+        /* BARRE DE NAVIGATION RESEAU                  */
+        /* =========================================== */
+
+        #navReseau {
+            z-index: 2;
+            position: fixed;
+            display: flex;
+            right: 0px;
+            bottom: 0px;
+            flex-direction: column;
+            border-radius: 20px 0px 0px 20px;
+            background-color: rgba(5, 5, 5, 0.6);
+        }
+
+        #reseau li a img{
+            margin: auto;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    
+    @media screen and (max-height: 775px){
+        #titleNav{
+            display: none;
+        }
+        
+        .scroll #produit , .notScroll #produit , .hidenScroll #produit {
+            margin-top: 240px;
+        }
+        
+    }
+    
+    @media screen and (max-height: 570px){
+        
+        .scroll #produit , .notScroll #produit , .hidenScroll #produit {
+            margin-top: 140px;
+        }
+        
+        #logo.scroll , #logo.notScroll , #logo.hidenScroll{
+            position: absolute;
+            top: 30px;
+            left: 100px;
+            width: 100px;
+        }
+    }
 }
 
 @media screen and (max-width: 1680px) {
     #image {
         column-count: 3;
     }
+    
 }
 
 @media screen and (max-width: 1280px) {
@@ -819,6 +956,11 @@ footer p{
 }
 
 @media screen and (max-width: 1080px){
+    
+    #titleNav{
+        display: none;
+    }
+    
     #navEnTete.scroll , #navEnTete.notScroll , #navEnTete.hidenScroll , #navEnTete {
     z-index: 1;
     position: fixed;
@@ -827,7 +969,8 @@ footer p{
     height: 50px;
     width: 100%;
     transition: 0.2s;
-}
+    }
+    
     #btnNavArticle.actif , #btnNavArticle.inactif{
         z-index: 1;
         position: absolute;
@@ -940,6 +1083,28 @@ footer p{
     .scroll .decoration , .hidenScroll .decoration {
         height: 25px;
     }
+    
+    /* =========================================== */
+    /* BARRE DE NAVIGATION RESEAU                  */
+    /* =========================================== */
+
+    #navReseau {
+        z-index: 2;
+        position: fixed;
+        display: flex;
+        right: 0px;
+        bottom: 0px;
+        flex-direction: column;
+        border-radius: 20px 0px 0px 20px;
+        background-color: rgba(5, 5, 5, 0.6);
+    }
+
+    #reseau li a img{
+        margin: auto;
+        width: 20px;
+        height: 20px;
+    }
+    
 }
 
 @media screen and (max-width: 860px) {
