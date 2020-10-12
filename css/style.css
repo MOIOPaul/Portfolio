@@ -914,6 +914,7 @@ footer p{
         }
 
         #reseau li a img{
+            padding: 5px;
             margin: auto;
             width: 20px;
             height: 20px;
@@ -1127,6 +1128,7 @@ footer p{
     }
 
     #reseau li a img{
+        padding: 15px;
         margin: auto;
         width: 20px;
         height: 20px;
