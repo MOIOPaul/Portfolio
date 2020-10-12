@@ -1390,11 +1390,13 @@
 
                         plus.className = "visible";
                         bouton.className = "visible";
+                        bouton.innerHTML = "Moins de créations";
 
                         setTimeout(function(){document.location.href =  "#artcImg" + cpt;}, 200);
                         document.cookie = (-1);
                     }
                     else{
+                        bouton.innerHTML = "Plus de créations";
                         setTimeout(function(){document.location.href =  "#artcImg" + cpt;}, 200);
                         document.cookie = (-1);
                     }
@@ -1448,10 +1450,12 @@
 
                         plus.className = "visible";
                         bouton.className = "visible";
+                        bouton.innerHTML = "Moins de créations";
                         setTimeout(function(){document.location.href = document.getElementById("legende").href;}, 200);
                     }
                     
                     else{
+                        bouton.innerHTML = "Plus de créations";
                         nbNavArticle = 1;
 
                         clickNavArticle();
