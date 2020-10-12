@@ -906,15 +906,19 @@ footer p{
             z-index: 2;
             position: fixed;
             display: flex;
+            flex-direction: column;
             right: 0px;
             bottom: 0px;
-            flex-direction: column;
             border-radius: 20px 0px 0px 20px;
             background-color: rgba(5, 5, 5, 0.6);
         }
-
+        
+        #reseau li a{
+            display: flex;
+            justify-content: center;
+        }
+        
         #reseau li a img{
-            padding: 8px;
             margin: auto;
             width: 20px;
             height: 20px;
@@ -1120,9 +1124,9 @@ footer p{
         z-index: 2;
         position: fixed;
         display: flex;
+        flex-direction: column;
         right: 0px;
         bottom: 0px;
-        flex-direction: column;
         border-radius: 20px 0px 0px 20px;
         background-color: rgba(5, 5, 5, 0.6);
     }
