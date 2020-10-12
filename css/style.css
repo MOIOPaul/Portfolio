@@ -410,24 +410,24 @@ span.espace{
     filter : drop-shadow(5px 5px 5px #000);
     position: relative;
 }
- 
+
+.comps p:nth-of-type(1){
+    font-size: 0.9em;
+}
+
 .circlesComps , .percentComps{
     width: 120px;
     height: 120px;
 }
 
-.percentComps{
+.imgComps{
     position: absolute;
-    left: 0px;
-    top:0px;
-}
-
-.nameComps{
+    left: calc(50% - (76px / 2));
+    top: calc(50% - (76px / 2) - (180px - 120px) / 2);
+    width: 76px;
+    height: 76px;
+    filter : none;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 1em;
-    margin-top: 0px;
 }
 
 .progressCircles , .fontProgressCircles {
