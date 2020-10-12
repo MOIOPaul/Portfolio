@@ -866,7 +866,36 @@ footer p{
         transition: 0.1s;
     }
     
-    @media screen and (min-height: 701px){
+    @media screen and (max-height: 910px){
+        
+        .scroll #produit , .notScroll #produit , .hidenScroll #produit {
+            margin-top: 0px;
+        }
+        
+        #logo.scroll , #logo.notScroll , #logo.hidenScroll{
+            position: absolute;
+            top: 30px;
+            left: 100px;
+            width: 100px;
+        }
+
+        #titleNav h1{
+            margin-top: 140px;
+        }
+    }
+    
+    @media screen and (max-height: 790px){
+        
+        .scroll #produit , .notScroll #produit , .hidenScroll #produit {
+            margin-top: 150px;
+        }
+        
+        #titleNav{
+            display: none;
+        }
+    }
+    
+    @media screen and (min-height: 616px){
     
         /* =========================================== */
         /* BARRE DE NAVIGATION RESEAU                  */
@@ -897,37 +926,7 @@ footer p{
         }
     }
     
-    @media screen and (max-height: 910px){
-        
-        .scroll #produit , .notScroll #produit , .hidenScroll #produit {
-            margin-top: 0px;
-        }
-        
-        #logo.scroll , #logo.notScroll , #logo.hidenScroll{
-            position: absolute;
-            top: 30px;
-            left: 100px;
-            width: 100px;
-        }
-
-        #titleNav h1{
-            margin-top: 140px;
-        }
-    }
-    
-    @media screen and (max-height: 790px){
-        
-        #logo.scroll , #logo.notScroll , #logo.hidenScroll{
-            display: none;
-        }
-        
-        #titleNav h1{
-            margin-top: 30px;
-        }
-        
-    }
-    
-    @media screen and (max-height: 700px){
+    @media screen and (max-height: 615px){
         
         /* =========================================== */
         /* BARRE DE NAVIGATION RESEAU                  */
