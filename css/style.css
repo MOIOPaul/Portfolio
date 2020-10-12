@@ -405,22 +405,21 @@ span.espace{
 .comps{
     width: 120px;
     height: 180px;
+    text-align: center;
     margin: 20px 40px 20px 40px;
     filter : drop-shadow(5px 5px 5px #000);
     position: relative;
 }
  
-.circlesComps{
+.circlesComps , .percentComps{
     width: 120px;
     height: 120px;
 }
 
 .percentComps{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.4em;
-    margin-top: calc(-67px - 0.7em);
+    position: absolute;
+    left: 0px;
+    top:0px;
 }
 
 .nameComps{
@@ -428,7 +427,7 @@ span.espace{
     justify-content: center;
     text-align: center;
     font-size: 1em;
-    margin-top: 45px;
+    margin-top: 0px;
 }
 
 .progressCircles , .fontProgressCircles {
