@@ -5,16 +5,16 @@
        <meta charset="UTF-8" />
        <title>Portfolio MOIO Paul</title>
        <meta name="author" content="MOIO"/>
-       <meta name="keywords" content="Portefolio_MOIO-Paul"/>
+       <meta name="keywords" content="Portfolio_MOIO-Paul"/>
        <meta name="description" content="PortFolio"/>
-       <link id="css" class="Jour" rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" href="css/style.css">
        <link  href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
        <link rel="shortcut icon" href="medias/logo-picto-nav.png">
 
     </head>
     <body>
-      <div id="load" class="inactif">
-          <img id="gifCharge" src="medias/chat-de-chargement-gif.gif" alt="chat de chargement"/>
+<!-- £ -->    <div id="load" class="inactif">
+<!-- £ -->       <img id="gifCharge" src="medias/chat-de-chargement-gif.gif" alt="chat de chargement"/>
           <p>Si tu pense détenir la vérité pure dans ton coeur, sache que ta stupidité n'a jamais été aussi grande...</p>
           <p>MIAOU !</p>
       </div>
@@ -31,7 +31,7 @@
                 <a id ="titleNav" href="#"><h1 id="nameNav">MOIO PAUL PORTFOLIO</h1>
                 <h2 id="secondTitleNav">Étudiant multimédia</h2></a>
               
-               <ul id="produit">
+<!-- £ -->               <ul id="produit">
                    <li>
                        <a href="Presentation-Realisation-Contact.html#presentation">Présentation</a>
                    </li>
@@ -44,10 +44,10 @@
                     <a href="#"><img src="medias/logo.png" alt="Logo"/></a>
                 </figure>
                
-               <ul id="utilisateur">
+<!-- £ -->               <ul id="utilisateur">
                    <li>
-                       <a href="javascript:void(0)" onclick="navEnTeteArticle()">Réalisations</a>
-                       <ul id="btnNavArticle" class="inactif">
+<!-- £ -->                       <a href="javascript:void(0)" onclick="navEnTeteArticle()">Réalisations</a>
+<!-- £ -->                       <ul id="btnNavArticle" class="inactif">
                            <li onclick="navEnTeteArticle();">
                                <a href="#galerie">Galerie</a>
                            </li>
@@ -60,7 +60,7 @@
                            <li onclick="navEnTeteArticle();">
                                <a href="Presentation-Realisation-Contact.html#article">Musical</a>
                            </li>
-                       </ul>
+<!-- £ -->                       </ul>
                    </li>
                     <li>
                        <div class="decoration"></div>
@@ -74,40 +74,8 @@
             </nav>
             
             <figure id="banner">
-                <iframe id="bannerImg" src="https://www.youtube.com/embed/P4q6dVdvF40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- £ -->                <iframe id="bannerImg" src="https://www.youtube.com/embed/P4q6dVdvF40" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </figure>
-            
-            <script>
-                var lastScroll = document.documentElement.scrollTop;
-
-                window.onscroll = function() {Scroll()};
-
-                    function Scroll() {
-                        
-                        if(1080 > window.innerWidth){
-                            var scrolling = document.documentElement.scrollTop;
-
-                            if (lastScroll > scrolling && scrolling > 40) {
-                                document.getElementById("navEnTete").className = "scroll";
-                                document.getElementById("logo").className = "scroll";
-
-                            }
-
-                            else if(scrolling < 40){
-                                document.getElementById("navEnTete").className = "notScroll";
-                                document.getElementById("logo").className = "notScroll";
-                            }
-
-                            else if(lastScroll < scrolling){
-                                document.getElementById("navEnTete").className = "hidenScroll";
-                                document.getElementById("logo").className = "hidenScroll";
-                            }
-
-                            lastScroll = scrolling;
-                        }
-
-                    }
-            </script>
             
         </header>
         <main id="contain" class="cacher">
@@ -284,302 +252,6 @@
             </section>
             
             <!-- ===================== -->
-            <!-- Section Article       -->
-            <!-- ===================== -->
-            
-            <section id="article" style="display: none">
-                
-                <section id="imageDt" class="sectionVisible">
-                
-                <article id="artcImg32" class="pair ">
-                       <figure class="pair nuit paysage" onclick="cpt=32; Zoom();">
-                           <img src="medias/Affiche-A4-flux-de-lune.png" alt="Flux de Lune"/>
-                        </figure>
-                </article>
-                
-                <article id="artcImg31" class="impair ">
-                       <figure class="impair nuit paysage" onclick="cpt=31; Zoom();">
-                           <img src="medias/affiche-A3.png" alt="Nuit de lumière"/>
-                       </figure>
-
-                  </article>
-
-                    <div id="plusImg" class="cacher">
-                      
-                       <article id="artcImg30" class="pair ">
-                       <figure class="pair nuit paysage" onclick="cpt=30; Zoom();">
-                           <img src="medias/Affiches-Bloodborne.png" alt="Affiches Bloodborne"/>
-                       </figure>
-
-                  </article>
-                      
-                       <article id="artcImg29" class="impair ">
-                       <figure class="impair nuit paysage" onclick="cpt=29; Zoom();">
-                           <img src="medias/Spawn.png" alt="Spawn"/>
-                        </figure>
-
-                </article>
-                
-                <article id="artcImg28" class="pair ">
-                       <figure class="pair jour paysage" onclick="cpt=28; Zoom();">
-                           <img src="medias/Set-complet.png" alt="Set complet"/>
-                       </figure>
-
-                  </article>
-
-                      <article id="artcImg27" class="impair ">
-                       <figure class="impair nuit portrait" onclick="cpt=27; Zoom();">
-                           <img src="medias/Sancrilegiis-prisma.png" alt="Sancrilegiis Prisma"/>
-                        </figure>
-
-                </article>
-                
-                <article id="artcImg26" class="pair ">
-                       <figure class="pair nuit paysage" onclick="cpt=26; Zoom();">
-                           <img src="medias/affiche%20A3%20150ppp.png" alt="Affiche Morphing"/>
-                       </figure>
-
-                  </article>
-                      
-                       <article id="artcImg25" class="impair ">
-                       <figure class="impair nuit portrait" onclick="cpt=25; Zoom();">
-                           <img src="medias/poster%20A4%20-%2072ppp.png" alt="Poster Morphing"/>
-                        </figure>
-
-                </article>
-                
-                 <article id="artcImg24" class="pair ">
-                       <figure class="pair jour portrait" onclick="cpt=24; Zoom();">
-                           <img src="medias/Elsa.png" alt="Asel Mioky"/>
-                       </figure>
-
-                  </article>
-                  
-                  <article id="artcImg23" class="impair ">
-                       <figure class="impair nuit portrait" onclick="cpt=23; Zoom();">
-                           <img src="medias/Les%20Trisitas.png" alt="Les Trisitas"/>
-                        </figure>
-
-                    </article>
-                  
-                  <article id="artcImg22" class="pair ">
-                       <figure class="pair nuit portrait" onclick="cpt=22; Zoom();">
-                           <img src="medias/Lucemtis-M.png" alt="Lucemtis Mioky"/>
-                       </figure>
-
-                    </article>
-                  
-                   <article id="artcImg21" class="impair ">
-                       <figure class="impair nuit paysage" onclick="cpt=21; Zoom();">
-                           <img src="medias/banni%C3%A8re.png" alt="Bannière"/>
-                        </figure>
-
-                    </article>
-                  
-                   <article id="artcImg20" class="pair ">
-                       <figure class="pair nuit paysage" onclick="cpt=20; Zoom();">
-                           <img src="medias/Limonth_tehs.png" alt="Limonth tehs"/>
-                        </figure>
-
-                    </article>
-                   
-                    <article id="artcImg19" class="impair ">
-                       <figure class="impair nuit paysage" onclick="cpt=19; Zoom();">
-                           <img src="medias/Descente%20de%20Lune.png" alt="Déscente de Lune"/>
-                       </figure>
-                       
-                    </article>
-
-                    <article id="artcImg18" class="pair">
-                        <figure class="pair nuit paysage" onclick="cpt=18; Zoom();">
-                           <img src="medias/Une%20nuit%20%C3%A9ternel.png" alt="Une nuit éternel"/>
-                        </figure>
-                        
-                    </article>
-                       
-                        <article id="artcImg17" class="impair">
-                            <figure class="impair jour paysage" onclick="cpt=17; Zoom();">
-                               <img src="medias/Aldion-Aube-pale.png" alt="Aldion Aube pale"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg16" class="pair ">
-                           <figure class="pair nuit paysage" onclick="cpt=16; Zoom();">
-                               <img src="medias/PinkShine.png" alt="PinkShine"/>
-                           </figure>
-
-                        </article>
-
-                        <article id="artcImg15" class="impair">
-                            <figure class="impair jour paysage" onclick="cpt=15; Zoom();">
-                               <img src="medias/Edy.png" alt="Edy"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg14" class="pair ">
-                           <figure class="pair jour portrait" onclick="cpt=14; Zoom();">
-                               <img src="medias/Masque.png" alt="Masque"/>
-                           </figure>
-
-                        </article>
-
-                        <article id="artcImg13" class="impair">
-                            <figure class="impair nuit paysage" onclick="cpt=13; Zoom();">
-                               <img src="medias/New%20city.png" alt="New City"/>
-                            </figure>
-
-                        </article>
-
-                        <article id="artcImg12" class="pair">
-                            <figure class="pair nuit paysage" onclick="cpt=12; Zoom();">
-                               <img src="medias/Aldion%20redmoon.png" alt="Aldion Redmoon"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg11" class="impair">
-                           <figure class="impair nuit paysage" onclick="cpt=11; Zoom();">
-                               <img src="medias/Aldion.png" alt="Aldion"/>
-                           </figure>
-
-                        </article> 
-
-                        <article id="artcImg10" class="pair">
-                            <figure class="pair jour paysage" onclick="cpt=10; Zoom();">
-                               <img src="medias/Erebor.png" alt="Erebor"/>
-                            </figure>
-                            
-                        </article>   
-
-                        <article id="artcImg9" class="impair">
-                           <figure class="impair jour portrait" onclick="cpt=9; Zoom();">
-                               <img src="medias/Eptus.png" alt="Eptus"/>
-                           </figure>
-
-                        </article>
-
-                        <article id="artcImg8" class="pair">
-                            <figure class="pair jour paysage" onclick="cpt=8; Zoom();">
-                               <img src="medias/Pomme.png" alt="Pomme"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg7" class="impair">
-                            <figure class="impair jour paysage" onclick="cpt=7; Zoom();">
-                               <img src="medias/Proxima.png" alt="Proxima"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg6" class="pair ">
-                           <figure class="pair jour portrait" onclick="cpt=6; Zoom();">
-                               <img src="medias/Grande%20tour.png" alt="Grande tour"/>
-                           </figure>
-
-                        </article>
-
-                        <article id="artcImg5" class="impair">
-                            <figure class="impair jour portrait" onclick="cpt=5; Zoom();">
-                               <img src="medias/Biblioth%C3%A9caire.png" alt="Bibliothécaire"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg4" class="pair ">
-                           <figure class="pair jour portrait" onclick="cpt=4; Zoom();">
-                               <img src="medias/Upsidre.png" alt="Upsidre"/>
-                           </figure>
-
-                        </article>
-
-                        <article id="artcImg3" class="impair">
-                            <figure class="impair jour paysage" onclick="cpt=3; Zoom();">
-                               <img src="medias/Velssios.png" alt="Velssios"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg2" class="pair">
-                            <figure class="pair jour portrait" onclick="cpt=2; Zoom();">
-                               <img src="medias/Steliom.png" alt="Steliom"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg1" class="impair">
-                            <figure class="impair nuit portrait" onclick="cpt=1; Zoom();">
-                               <img src="medias/Ville%20de%20nuit.png" alt="Ville de nuit"/>
-                            </figure>
-                            
-                        </article>
-
-                        <article id="artcImg0" class="pair">
-                            <figure class="pair jour portrait" onclick="cpt=0; Zoom();">
-                               <img src="medias/L'ancien%20Professeur.png" alt="L'ancien Professeur"/>
-                            </figure>
-                            
-                        </article>
-
-                    </div>
-
-                    <button id="recouvrementImg" onclick="plus(); detailPlusNav = 'Img';"></button>
-                
-                </section>
-                
-            </section>
-            
-            <script>
-            
-                //                                  //
-                // Bouton navigation entete Article //
-                //                                  //
-
-                var presence = Boolean(0);
-
-                function navEnTeteArticle(){ 
-
-                    var btnEnTeteArticle = document.getElementById("btnNavArticle");
-
-                    if (presence == 0){
-                        btnEnTeteArticle.className = "actif";
-                        presence = 1;
-                    } else if(presence == 1){
-                        btnEnTeteArticle.className = "inactif";
-                        presence = 0;
-                    }
-                }
-                
-                //                                  //
-                // Bouton Plus d'articles           //
-                //                                  //
-
-                detailPlusNav = 'Img';
-
-                function plus(){ 
-
-
-                    var plus = document.getElementById("plus" + detailPlusNav);
-                    var bouton = document.getElementById("recouvrement" + detailPlusNav);
-
-                    if(plus.className == "cacher"){
-                        plus.className = "visible";
-                        bouton.innerHTML = "Moins de créations";
-                    }
-                    else{
-                        plus.className = "cacher";
-                        bouton.innerHTML = "Plus de créations";
-
-                        setTimeout(function(){document.location.href = "Presentation-Realisation-Contact.html#recouvrement" + detailPlusNav;}, 200);
-                    }
-                }
-                
-            </script>
-            
-            
-            <!-- ===================== -->
             <!-- Zoom image            -->
             <!-- ===================== -->
             
@@ -597,174 +269,11 @@
             
         </main>
         
-        <script>
-                cpt = 0;
-                
-                //                                  //
-                //  Zoom image                      //
-                //                                  //
-
-            
-                function Zoom(){
-
-                    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
-
-                    for(i= 0 ; i <= cpt ; i++){
-                        numImg = totalImg - i;
-                    }
-
-                    BcgZoom = document.getElementById("bcgZoom");
-
-                    img = document.getElementsByClassName("imgZoom")[numImg];
-                    imgZoomer = document.getElementById("imgZoomer");
-                    legendeTexte = document.getElementById("legende");
-
-                    BcgZoom.className = "ouvert";
-                    imgZoomer.src = img.src;
-                    legendeTexte.innerHTML = img.alt;
-                    legendeTexte.href = "Presentation-Realisation-Contact.html#artcImg" + cpt;
-                    document.cookie = cpt;
-                    console.log(document.cookie);
-                }
-            
-                function verification(){
-                
-                    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
-
-                    for(i = 0 ; i <= cpt ; i++){
-                        numImg = totalImg - i;
-                    }
-
-                    var plus = document.getElementById("plusImg");
-                    var bouton = document.getElementById("recouvrementImg");
-
-                    if(numImg > 1){
-                        nbNavArticle = 1;
-
-                        plus.className = "visible";
-                        bouton.className = "visible";
-                        setTimeout(function(){document.location.href = document.getElementById("legende").href;}, 200);
-                    }
-                    
-                    else{
-                        nbNavArticle = 1;
-                        
-                        setTimeout(function(){document.location.href = document.getElementById("legende").href;}, 200);
-                    }
-                }
-
-                function ferme(){ 
-
-                    BcgZoom = document.getElementById("bcgZoom");
-
-                    BcgZoom.className = "ferme";
-                    
-                    document.cookie = (-1);
-                }
-
-                function avant(){
-
-                    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
-
-
-                    if(cpt == 0){
-                        cpt = totalImg;
-                    }
-                    else{
-                        cpt -= 1;
-                    }
-
-                    for(i= 0 ; i <= cpt ; i++){
-                        numImg = totalImg - i;
-                    }
-
-                    if( numImg == (totalImg + 1)){
-                        numImg = 0;
-                    }
-
-                    img = document.getElementsByClassName("imgZoom")[numImg];
-                    imgZoomer = document.getElementById("imgZoomer");
-
-                    imgZoomer.src = img.src;
-                    legendeTexte.innerHTML = img.alt;
-                    legendeTexte.href = "Presentation-Realisation-Contact.html#artcImg" + cpt;
-                    document.cookie = cpt;
-                }
-
-                function arriere(){
-
-                    var totalImg = document.getElementById("imageDt").getElementsByTagName("img").length - 1;
-
-                    if( cpt == totalImg){
-                        cpt = 0;
-                    }
-                    else{
-                        cpt += 1;
-                    }
-
-                    for(i= 0 ; i <= cpt ; i++){
-                        numImg = totalImg - i;
-                    }
-
-                    if( numImg == (-1)){
-                        numImg = totalImg;
-                    }
-
-                    img = document.getElementsByClassName("imgZoom")[numImg];
-                    imgZoomer = document.getElementById("imgZoomer");
-
-                    imgZoomer.src = img.src;
-                    legendeTexte.innerHTML = img.alt;
-                    legendeTexte.href = "Presentation-Realisation-Contact.html#artcImg" + cpt;
-                    document.cookie = cpt;
-                }
-
-
-
-                document.addEventListener("keydown", function(event) {
-
-                    switch(event.key) {
-
-                        case "Escape":
-                            ferme();
-
-                            break;
-
-                        case "ArrowRight":
-                            avant();
-
-                            break;
-
-                        case "ArrowLeft":
-                            arriere();
-
-                            break;
-                        case "Enter":
-                            verification();
-                            ferme();
-                            
-                            console.log("doublepd");
-
-                            break;
-                        case "c":
-                            
-                            var cat = document.getElementById("load");
-                            
-                            if(cat.className == "inactif"){
-                                cat.className = "actif";
-                                console.log(cat);
-                            }else if(cat.className == "actif"){
-                                cat.className = "inactif";
-                            }
-                    }
-
-                });
-            </script>
-        
         <footer>
             <p>Cr&eacute;ateur : Paul MOIO</p>
             <p>Appuyé sur la touche "c"</p>
         </footer>
-          
+        
+        <script src="js/styleAccueil.js"></script>
     </body>
 </html>

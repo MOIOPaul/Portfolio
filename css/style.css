@@ -1,6 +1,6 @@
-/* =========================================== */
-/* LOAD                                        */
-/* =========================================== */
+/*£*/ /* =========================================== */
+/*£*/ /* LOAD                                        */
+/*£*/ /* =========================================== */
 
 #load{
     visibility: visible;
@@ -58,7 +58,6 @@ footer , body , main , ul , figure , #image , button , button:hover , button:act
 
 body{
     font-family: 'El Messiri', sans-serif;
-    transition: 0.2s;
     min-height: 100%;
 }
 
@@ -82,8 +81,6 @@ footer{
 /* =========================================== */
 
 body{
-    display: flex;
-    flex-direction: column;
     color : #EEE;
     background-color: #000;
 }
@@ -99,9 +96,8 @@ main{
     flex-direction: column;
     align-content: space-around;
     background-color: rgba(26, 26, 26, 0.9);
-    transition: 0.2s;
-    padding: 0px 40px 0px 40px;
-    width: 91%;
+    padding: 0px 40px;
+    width: 90%;
     flex-grow: 1;
     height: 100%;
     margin: auto;
@@ -112,7 +108,7 @@ footer{
     background-color: #111;
 }
 
-#navEnTete li , navReseau li , #navArticle li{
+/*£*/ #navEnTete li , navReseau li , #navArticle li{
     display: flex;
     justify-content: center;
     align-self: center;
@@ -121,7 +117,6 @@ footer{
 }
 
 h1{
-    color:#EEE;
     font-size: 2em;
     font-family: 'El Messiri', sans-serif;
     font-weight: 700;
@@ -132,15 +127,17 @@ h1{
 }
 
 h2{
-    color:#EEE;
     font-size: 1.8em;
     font-family: 'El Messiri', sans-serif;
     font-weight: 700;
     padding-bottom: 15px;
 }
 
+body , .imgOverlay , #image figure , #article figure , figure:hover .imgOverlay , #article figure:hover , #imgZoomer , #ferme , #avant , #arriere , #arriere:active , #ferme:hover, #ferme:active , #avant:hover , #avant:active , #arriere:hover , #arriere:active , #imgZoomer:hover , #ferme:active , #avant:active , #imgZoomer:active , .progressCircles , .fontProgressCircles , #navArticle .actif , #navArticle .inactif , #plusVd.cacher , #plusImg.cacher , #plusMsc.cacher , #plusVd.visible , #plusImg.visible , #plusMsc.visible , #recouvrementVd , #recouvrementImg , #recouvrementMsc , #navEnTete.scroll , #navEnTete.notScroll , #navEnTete.hidenScroll , #navEnTete.scroll , #btnNavArticle.actif , #btnNavArticle.inactif , #logo.hidenScroll , #logo.scroll img , #logo.hidenScroll img , #logo.notScroll , #logo.scroll , #logo.notScroll img , .notScroll .decoration , .scroll .decoration , .hidenScroll .decoration {
 
-
+    transition : 0.2s;
+    
+}
 /* =========================================== */
 /* FOND                                        */
 /* =========================================== */
@@ -190,7 +187,6 @@ a:active , #navEntete li:active , #navReseau li:active , button:active{
 .imgOverlay{
     background-color: rgba(255, 38, 123, 0.75);
     opacity: 0;
-    transition: 0.2s;
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -201,8 +197,8 @@ a:active , #navEntete li:active , #navReseau li:active , button:active{
     align-items: center;
 }
 
-#image .imgOverlay{
-    border-radius: 5px 5px 5px;
+#image .imgOverlay , #image figure{
+    border-radius: 5px 5px 5px 5px;
 }
 
 .imgOverlay:hover h2{
@@ -219,14 +215,12 @@ a:active , #navEntete li:active , #navReseau li:active , button:active{
     border-bottom: 0px solid #EEE;
 }
 
-#image figure , #article figure{
+/*£*/ #image figure , #article figure{
     cursor: pointer;
-    transition: 0.2s;
 }
 
-figure:hover .imgOverlay , #article figure:hover{
+/*£*/ figure:hover .imgOverlay , #article figure:hover{
     opacity: 1;
-    transition: 0.2s; 
 }
 
 figure:hover .imgOverlay {
@@ -261,19 +255,16 @@ figure:hover .imgOverlay {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px auto auto auto;
+    margin: auto;
+    padding: 5px;
     width: 90%;
     height: 90%;
-    overflow: visible;
 }
-
-
 
 #imgZoomer{
     border: 4px solid #EEE;
     max-width: 100%;
     max-height: 100%;
-    transition: 0.2s;
 }
 
 #legende {
@@ -296,7 +287,6 @@ figure:hover .imgOverlay {
 #ferme , #avant , #arriere{
     color: #EEE;
     font-weight: bold;
-    transition: 0.2s;
     height: 70px;
     width: 70px;
     display: flex;
@@ -312,7 +302,7 @@ figure:hover .imgOverlay {
     right: 2%;
 }
 
-#avant{
+#avant , #arriere{
     font-size: 3em;
     position: absolute;
     top: 45%;
@@ -320,16 +310,12 @@ figure:hover .imgOverlay {
 }
 
 #arriere{
-    font-size: 3em;
-    position: absolute;
-    top: 45%;
     left: 2%;
     transform: rotate(180deg);
 }
 
 #arriere:active{
     transform: scale(0.8) rotate(180deg);
-    transition: 0.2s;
 }
 
 #ferme:hover,
@@ -337,18 +323,15 @@ figure:hover .imgOverlay {
     opacity: 0.7;
     text-decoration: none;
     cursor: pointer;
-    transition: 0.2s;
 }
 
 #imgZoomer:hover{
     transform: scale(0.97);
     cursor: pointer;
-    transition: 0.2s;
 }
 
 #ferme:active , #avant:active , #imgZoomer:active{
     transform: scale(0.8);
-    transition: 0.2s;
 }
 
 /* =========================================== */
@@ -437,7 +420,6 @@ span.espace{
     stroke-dasharray: 327;
     transform: rotate(-90deg);
     transform-origin: center center;
-    transition : 0.2s;
 }
 
 .fontProgressCircles{
@@ -453,9 +435,9 @@ stop:nth-child(2){
     stop-color: #EEE;
 }
 
-/* =========================================== */
-/* ARTICLE                                     */
-/* =========================================== */
+/*£*/ /* =========================================== */
+/*£*/ /* ARTICLE                                     */
+/*£*/ /* =========================================== */
 
 #navArticle{
     margin-bottom: 25px;
@@ -476,12 +458,10 @@ stop:nth-child(2){
     border-bottom: 2px solid #FFF;
     border-width: 0%;
     padding: 0px;
-    transition: 0.2s;
 }
 
 #navArticle .inactif{
     border-bottom: 0px;
-    transition: 0.2s
 }
 
 
@@ -582,7 +562,7 @@ div.impair p , div.pair p{
 
 /* =========================================== */
 
-article.pair{
+/*£*/ article.pair{
     flex-direction: row-reverse;
 }
 
@@ -605,14 +585,12 @@ div.pair p{
     display: none;
     height: 0px;
     transform: scaleY(0.0);
-    transition: 0.2s;
 }
 
 #plusVd.visible , #plusImg.visible , #plusMsc.visible{
     display: block;
     height: 100%;
     transform: scaleY(1);
-    transition: 0.2s;
 }
 
 #recouvrementVd , #recouvrementImg , #recouvrementMsc{
@@ -626,7 +604,6 @@ div.pair p{
     padding: 20px;
     color: rgba(255, 255, 255, 0.7);
     font-size: 1em;
-    transition 0.2s;
 }
 
 /* =========================================== */
@@ -651,7 +628,6 @@ div.pair p{
 #image figure {
     overflow: hidden;
     margin-top: 16px;
-    border-radius: 5px 5px 5px 5px;
     display: flex;
     justify-content: center;
     break-inside: avoid;
@@ -791,7 +767,6 @@ footer p{
         display: flex;
         flex-direction: column;
         background-color: rgba(17, 17, 17, 0.9);
-        transition: 0.2s;
     }
     
 /* --------------------------------------------------------- */
@@ -848,14 +823,14 @@ footer p{
         flex-direction: column;
     }
     
-    .scroll #btnNavArticle.actif , .notScroll #btnNavArticle.actif , .hidenScroll #btnNavArticle.actif{
+    /*£*/ .scroll #btnNavArticle.actif , .notScroll #btnNavArticle.actif , .hidenScroll #btnNavArticle.actif{
         margin-top: 10px;
         margin-bottom: 10px;
         display: block;
         font-size: 0.6em;
     }
     
-    .scroll #btnNavArticle.inactif , .notScroll #btnNavArticle.inactif , .hidenScroll #btnNavArticle.inactif{
+    /*£*/ .scroll #btnNavArticle.inactif , .notScroll #btnNavArticle.inactif , .hidenScroll #btnNavArticle.inactif{
         display: none;
     }
     
@@ -1014,10 +989,9 @@ footer p{
         background-color: rgba(17, 17, 17, 0.9);
         height: 50px;
         width: 100%;
-        transition: 0.2s;
     }
     
-    #btnNavArticle.actif , #btnNavArticle.inactif{
+/*£*/     #btnNavArticle.actif , #btnNavArticle.inactif{
         z-index: 1;
         position: absolute;
         display: flex;
@@ -1027,23 +1001,20 @@ footer p{
         width: 15em;
         top: 100%;
         background-color: rgba(17, 17, 17, 0.9);
-        transition: 0.2s;
         border-radius: 0px 0px 20px 20px;
         opacity: 1;
-        transition: 0.2s;
     }
 
-    #btnNavArticle.actif{
+/*£*/     #btnNavArticle.actif{
         visibility: visible;
     }
 
-    #btnNavArticle.inactif{
+/*£*/     #btnNavArticle.inactif{
         visibility: hidden;
         z-index: -1;
         top: 40%;
         height: 0%;
         opacity: 0;
-        transition: 0.2s;
     }
 
     #produit , #utilisateur, a{
@@ -1066,7 +1037,6 @@ footer p{
     #navEnTete.hidenScroll , #logo.hidenScroll {
         height : 0%;
         opacity: 0%;
-        transition: 0.2s;
         visibility: hidden;
     }
 
@@ -1076,7 +1046,6 @@ footer p{
         margin-top: -40px;
         width: 50px;
         height: 50px;
-        transition:0.2s;
     }
 
     /* =========================================== */
@@ -1092,7 +1061,6 @@ footer p{
         margin-top: 40px;
         z-index: 2;
         width: 80px;
-        transition:0.2s;
     }
 
 
@@ -1100,7 +1068,6 @@ footer p{
         margin-top: -40px;
         width: 80px;
         height:80px;
-        transition:0.2s;
     }
     
     #produit li a , #utilisateur li a{
@@ -1113,7 +1080,7 @@ footer p{
         width: 1px;
     }
 
-    #btnNavArticle li:nth-child(2) {
+/*£*/     #btnNavArticle li:nth-child(2) {
         position: static;
     }
 
@@ -1123,7 +1090,6 @@ footer p{
         width 0px;
         border-right: 1px solid #EEE;
         border-left: 1px solid #EEE;
-        transition : 0.2s;
     }
 
     .scroll .decoration , .hidenScroll .decoration {
