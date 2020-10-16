@@ -649,19 +649,27 @@ div.pair p{
 }
 
 #image figure {
-     margin-top: 16px;
-    
+    overflow: hidden;
+    margin-top: 16px;
+    border-radius: 5px 5px 5px 5px;
+    display: flex;
+    justify-content: center;
+    break-inside: avoid;
 }
 
 #image figure:nth-child(1) {
      margin-top: 0px;
-    
 }
 
-#image img {
+#image .portrait{
     vertical-align: middle;
-    border-radius: 5px 5px 5px;
     width: 100%;
+    height: auto;
+}
+
+#image .paysage{
+    vertical-align: middle;
+    width: 165%;
     height: auto;
 }
 
