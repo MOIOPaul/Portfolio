@@ -60,7 +60,7 @@ var lastScroll = document.documentElement.scrollTop;
             
                 function Zoom(){
 
-                    var totalImg = document.getElementById("image").getElementsByTagName("img").length - 1;
+                    var totalImg = document.getElementById("image").getElementsByClassName("imgZoom").length - 1;
 
                     for(i= 0 ; i <= cpt ; i++){
                         numImg = totalImg - i;
@@ -96,7 +96,7 @@ var lastScroll = document.documentElement.scrollTop;
 
                 function avant(){
 
-                    var totalImg = document.getElementById("image").getElementsByTagName("img").length - 1;
+                    var totalImg = document.getElementById("image").getElementsByClassName("imgZoom").length - 1;
 
 
                     if(cpt == 0){
@@ -125,7 +125,7 @@ var lastScroll = document.documentElement.scrollTop;
 
                 function arriere(){
 
-                    var totalImg = document.getElementById("image").getElementsByTagName("img").length - 1;
+                    var totalImg = document.getElementById("image").getElementsByClassName("imgZoom").length - 1;
 
                     if( cpt == totalImg){
                         cpt = 0;
@@ -151,7 +151,17 @@ var lastScroll = document.documentElement.scrollTop;
                     document.cookie = cpt;
                 }
 
+                function Cat(){
+                    
+                    var cat = document.getElementById("load");
 
+                    if(cat.className == "inactif"){
+                        cat.className = "actif";
+                        console.log(cat);
+                    }else if(cat.className == "actif"){
+                        cat.className = "inactif";
+                    }
+                }
 
                 document.addEventListener("keydown", function(event) {
 
@@ -159,7 +169,10 @@ var lastScroll = document.documentElement.scrollTop;
 
                         case "Escape":
                             ferme();
-
+                            
+                            var cat = document.getElementById("load");
+                            cat.className = "inactif";
+                            
                             break;
 
                         case "ArrowRight":
@@ -173,21 +186,12 @@ var lastScroll = document.documentElement.scrollTop;
                             break;
                         case "Enter":
                             verification();
-                            ferme();
-                            
-                            console.log("doublepd");
 
                             break;
                         case "c":
+ /*£*/                      Cat();
                             
- /*£*/                           var cat = document.getElementById("load");
-                            
-                            if(cat.className == "inactif"){
-                                cat.className = "actif";
-                                console.log(cat);
-                            }else if(cat.className == "actif"){
-                                cat.className = "inactif";
-                            }
+                            break;
                     }
 
                 });

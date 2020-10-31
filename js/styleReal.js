@@ -110,7 +110,7 @@ var lastScroll = document.documentElement.scrollTop;
 
 
 
-window.onload = function(){
+        window.onload = function(){
                 cpt = document.cookie;
 
                 if((-1) != cpt){
@@ -270,15 +270,16 @@ cpt = 0;
                     legendeTexte.href = "#artcImg" + cpt;
                 }
 
-
-
                 document.addEventListener("keydown", function(event) {
 
                     switch(event.key) {
 
                         case "Escape":
                             ferme();
-
+                            
+                            var cat = document.getElementById("load");
+                            cat.className = "inactif";
+                            
                             break;
 
                         case "ArrowRight":
@@ -292,21 +293,8 @@ cpt = 0;
                             break;
                         case "Enter":
                             verification();
-                            ferme();
-                            
-                            console.log("doublepd");
 
                             break;
-                        case "c":
-                            
-                            var cat = document.getElementById("load");
-                            
-                            if(cat.className == "inactif"){
-                                cat.className = "actif";
-                                console.log(cat);
-                            }else if(cat.className == "actif"){
-                                cat.className = "inactif";
-                            }
                     }
 
                 });

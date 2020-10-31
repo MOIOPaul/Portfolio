@@ -14,7 +14,8 @@
     </head>
     <body>
 <!-- £ -->    <div id="load" class="inactif">
-<!-- £ -->       <img id="gifCharge" src="medias/chat-de-chargement-gif.gif" alt="chat de chargement"/>
+        <button onclick="var cat = document.getElementById('load'); cat.className = 'inactif';" class="btnFerme">&times;</button>
+<!-- £ -->       <img id="gifCharge" src="medias/chat-de-chargement-gif.gif" alt="chat"/>
           <p>Si tu pense détenir la vérité pure dans ton coeur, sache que ta stupidité n'a jamais été aussi grande...</p>
           <p>MIAOU !</p>
       </div>
@@ -116,6 +117,10 @@
             <section id="galerie">
                
                <div id="image">
+                        <figure onclick="cpt=33; Zoom();">
+                                <div class="imgOverlay"><h2>Menu</h2></div>
+                                <img class="imgZoom paysage"  src="medias/menu.gif" alt="Menu"/>
+                        </figure>
                         <figure onclick="cpt=32; Zoom();">
                                 <div class="imgOverlay"><h2>Flux de Lune</h2></div>
                                 <img class="imgZoom portrait"  src="medias/Affiche-A4-flux-de-lune.png" alt="Flux de Lune"/>
@@ -132,6 +137,18 @@
                                 <div class="imgOverlay"><h2>Spawn</h2></div>
                                 <img class="imgZoom paysage"  src="medias/Spawn.png" alt="Spawn"/>
                         </figure>
+                   
+                   
+                   
+                   
+                        <figure onclick=" Cat();" style="background-color: rgba(0, 0, 0, 0.8);">
+                                <div class="imgOverlay"><h2>Cat</h2></div>
+                                <img style="padding-left: 20px;" class=" portrait"  src="medias/chat-de-chargement-gif.gif" alt="Cat"/>
+                        </figure>
+                   
+                   
+                   
+                   
                         <figure onclick="cpt=28; Zoom();">
                                 <div class="imgOverlay"><h2>Set complet</h2></div>
                                 <img class="imgZoom paysage"  src="medias/Set-complet.png" alt="Set complet"/>
@@ -169,8 +186,8 @@
                                 <img class="imgZoom paysage"  src="medias/Limonth_tehs.png" alt="Limonth tehs"/>
                         </figure>
                        <figure onclick="cpt=19; Zoom();">
-                                <div class="imgOverlay"><h2>Déscente de Lune</h2></div>
-                                <img class="imgZoom paysage"  src="medias/Descente%20de%20Lune.png" alt="Déscente de Lune"/>
+                                <div class="imgOverlay"><h2>Descente de Lune</h2></div>
+                                <img class="imgZoom paysage"  src="medias/Descente%20de%20Lune.png" alt="Descente de Lune"/>
                         </figure>
                         <figure onclick="cpt=18; Zoom();">
                                 <div class="imgOverlay"><h2>Une nuit éternel</h2></div>
@@ -257,7 +274,7 @@
             
             <div id="bcgZoom" class="ferme">
 
-                <button onclick="ferme();" id="ferme">&times;</button>
+                <button onclick="ferme();" class="btnFerme">&times;</button>
                 <button onclick="avant();" id="avant">&#10148;</button>
                 <button onclick="arriere();" id="arriere">&#10148;</button>
                 <figure id="#figureZoomer" onclick="verification();">
@@ -271,7 +288,7 @@
         
         <footer>
             <p>Cr&eacute;ateur : Paul MOIO</p>
-            <p>Appuyé sur la touche "c"</p>
+            <p><a onclick="Cat()">Appuyé sur la touche "c"</a></p>
         </footer>
         
         <script src="js/styleAccueil.js"></script>

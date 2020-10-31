@@ -15,7 +15,8 @@
     <body>
      
 <!-- £ -->     <div id="load" class="inactif">
-<!-- £ -->         <img id="gifCharge" src="medias/chat-de-chargement-gif.gif" alt="chat de chargement"/>
+        <button onclick="var cat = document.getElementById('load'); cat.className = 'inactif';" class="btnFerme">&times;</button>
+<!-- £ -->         <img id="gifCharge" src="medias/chat-de-chargement-gif.gif" alt="chat"/>
           <p>Si tu pense détenir la vérité pure dans ton coeur, sache que ta stupidité n'a jamais été aussi grande...</p>
           <p>MIAOU !</p>
       </div>
@@ -127,10 +128,14 @@
                     <span class="lettre">U</span>
                     <span class="lettre">L</span>
                 </h1>
-                   
-                <p id="textPres">
-                    Je suis ce que l'on appelle souvent un créatif. Ce que j'aime faire dans la vie c'est créer toutes sortes de choses, que ce soit des images, des sites web, des vidéos, mais principalement des jeux vidéo. J'ai l'intention de créer un jeu vidéo et je mets tout en œuvre pour finaliser ce projet. Je suis actuellement en deuxième année de formation pour un DUT MMI (métier du multimédia et interne) à Saint-Dié-des-Vosges. Je suis un homme excentrique, travailleur et surtout, je suis très motivé à créer ce jeu vidéo que je conçois depuis 2 ans. La plupart des créations présentes sur ce site sont des visuels pour mon jeu vidéo et/ou des tableaux pour entraîner mes compétences. Je sais utiliser Photoshop, Illustrateur, Indesign, After Effect, Premier Pro, Blender, Flstudio20, et unity. J'ai des capacités en HTML, CSS, Javascript, PHP, et Anglais. J'écris aussi actuellement un livre sur mon jeu vidéo en plus de son développement avant de le mettre en place grâce à une structure comme From Software.
-                </p>
+                
+                <div id="containPres">
+                
+                    <p id="textPres">
+                        Je suis ce que l'on appelle souvent un créatif. Ce que j'aime faire dans la vie c'est créer toutes sortes de choses, que ce soit des images, des sites web, des vidéos, mais principalement des jeux vidéo. J'ai l'intention de créer un jeu vidéo et je mets tout en œuvre pour finaliser ce projet. Je suis actuellement en deuxième année de formation pour un DUT MMI (métier du multimédia et interne) à Saint-Dié-des-Vosges. Je suis un homme excentrique, travailleur et surtout, je suis très motivé à créer ce jeu vidéo que je conçois depuis 2 ans. La plupart des créations présentes sur ce site sont des visuels pour mon jeu vidéo et/ou des tableaux pour entraîner mes compétences. Je sais utiliser Photoshop, Illustrateur, Indesign, After Effect, Premier Pro, Blender, Flstudio20, et unity. J'ai des capacités en HTML, CSS, Javascript, PHP, et Anglais. J'écris aussi actuellement un livre sur mon jeu vidéo en plus de son développement avant de le mettre en place grâce à une structure comme From Software.
+                    </p>
+                    
+                </div>
                 
                 <a id="cv" href="medias/Curriculum%20vitae%20MOIO_Paul.pdf" target="_blank">Télécharger mon CV</a>
             </section>
@@ -395,51 +400,73 @@
                 
                 <section id="imageDt" class="sectionVisible">
                 
-                <article id="artcImg32" class="pair ">
-                       <figure class="pair nuit paysage" onclick="cpt=32; Zoom();">
-                           <div class="imgOverlay"><h2>Flux de Lune</h2></div>
-                           <img class="imgZoom" src="medias/Affiche-A4-flux-de-lune.png" alt="Flux de Lune"/>
-                        </figure>
-
-                        <div class="pair">
-                            <h2>Flux de Lune</h2>
-                            <p>
-                                Une nouvelle représentation de la Lune dans le décor étoilé de Morphing. La grande différence avec mes autres tableaux du même style est que dans celui-ci la Lune est présente en tant qu'élément mineur. En effet celle-ci est en train de se faire dérober son énergie par le feu des âmes présentes dans un ancien lieu détruit par le temps. Cette flamme dévorant l'énergie de la Lune est aussi capable de la restituer au profit de celui qui saurait la prendre. Ce concept art ne sera malheureusement pas présent dans le jeu lui aussi.
-                            </p>
-                            <h3>détails</h3>
-                            <ul>
-                                <li>Dimensions : 2480 x 3508 pixels</li>
-                                <li>Technique : Photoshop et Illustrator</li>
-                                <li>Type : tableau</li>
-                                <li>Date : 30/09/2020</li>
-                            </ul>
-                        </div>
-
-                </article>
-                
-                <article id="artcImg31" class="impair ">
-                       <figure class="impair nuit paysage" onclick="cpt=31; Zoom();">
-                           <div class="imgOverlay"><h2>Nuit de lumière</h2></div>
-                           <img class="imgZoom" src="medias/affiche-A3.png" alt="Nuit de lumière"/>
+                    <article id="artcImg33" class="impair ">
+                       <figure class="impair nuit paysage" onclick="cpt=33; Zoom();">
+                           <div class="imgOverlay"><h2>Menu</h2></div>
+                           <img class="imgZoom" src="medias/menu.gif" alt="Menu"/>
                        </figure>
 
                         <div class="impair">
-                            <h2>Nuit de lumière</h2>
+                            <h2>Menu</h2>
                             <p>
-                                La nuit étoilée de ce tableau est constitué d'un premier plan avec la forêt mystique de morphing et son personnage principal surmonté de son petit compagnon de toujours. Au second plan se trouvent les couleurs d'un flux d'énergie émis des étoiles pour que la terre s'en imprègne. Pour autant cette énergie n'est visible que par le spectateur de ce tableau. La véritable forme de ce tableau est en vérité la vision qui lui est donnée car cette vision n'est pas présente dans le jeu. Cette image est donc un concept art qui n'aura jamais vu le jour.
+                               Le menu est l'image d'arrivée dans le jeu Morphing. Un projet qui, comme on peut le constater grâce aux images relier, est un projet qui occupe un certain nombre de mes œuvres. L'image en question est un gif bien qu'à sa source on trouvera une vidéo animée. Cette image représentant le symbole du jeu, le masque de Shin le personnage principal du jeu. Ce masque étant le symbole principal, il est normal que sa représentation ce fasse même dans l'image principale du jeu avec un effet déstructuré qui se tire de la personnalité de Shin.
                             </p>
                             <h3>détails</h3>
                             <ul>
-                                <li>Dimensions : 4961 x 3508 pixels</li>
+                                <li>Dimensions : 1920 x 1080 pixels</li>
                                 <li>Technique : Photoshop et Illustrator</li>
-                                <li>Type : tableau</li>
-                                <li>Date : 26/09/2020</li>
+                                <li>Type : Image animée (GIF)</li>
+                                <li>Date : 02/10/2020</li>
                             </ul>
                         </div>
 
                   </article>
+                    
+                    <article id="artcImg32" class="pair ">
+                           <figure class="pair nuit paysage" onclick="cpt=32; Zoom();">
+                               <div class="imgOverlay"><h2>Flux de Lune</h2></div>
+                               <img class="imgZoom" src="medias/Affiche-A4-flux-de-lune.png" alt="Flux de Lune"/>
+                            </figure>
+
+                            <div class="pair">
+                                <h2>Flux de Lune</h2>
+                                <p>
+                                    Une nouvelle représentation de la Lune dans le décor étoilé de Morphing. La grande différence avec mes autres tableaux du même style est que dans celui-ci la Lune est présente en tant qu'élément mineur. En effet celle-ci est en train de se faire dérober son énergie par le feu des âmes présentes dans un ancien lieu détruit par le temps. Cette flamme dévorant l'énergie de la Lune est aussi capable de la restituer au profit de celui qui saurait la prendre. Ce concept art ne sera malheureusement pas présent dans le jeu lui aussi.
+                                </p>
+                                <h3>détails</h3>
+                                <ul>
+                                    <li>Dimensions : 2480 x 3508 pixels</li>
+                                    <li>Technique : Photoshop et Illustrator</li>
+                                    <li>Type : tableau</li>
+                                    <li>Date : 30/09/2020</li>
+                                </ul>
+                            </div>
+
+                    </article>
 
                     <div id="plusImg" class="cacher">
+                          
+                     <article id="artcImg31" class="impair ">
+                           <figure class="impair nuit paysage" onclick="cpt=31; Zoom();">
+                               <div class="imgOverlay"><h2>Nuit de lumière</h2></div>
+                               <img class="imgZoom" src="medias/affiche-A3.png" alt="Nuit de lumière"/>
+                           </figure>
+
+                            <div class="impair">
+                                <h2>Nuit de lumière</h2>
+                                <p>
+                                    La nuit étoilée de ce tableau est constitué d'un premier plan avec la forêt mystique de morphing et son personnage principal surmonté de son petit compagnon de toujours. Au second plan se trouvent les couleurs d'un flux d'énergie émis des étoiles pour que la terre s'en imprègne. Pour autant cette énergie n'est visible que par le spectateur de ce tableau. La véritable forme de ce tableau est en vérité la vision qui lui est donnée car cette vision n'est pas présente dans le jeu. Cette image est donc un concept art qui n'aura jamais vu le jour.
+                                </p>
+                                <h3>détails</h3>
+                                <ul>
+                                    <li>Dimensions : 4961 x 3508 pixels</li>
+                                    <li>Technique : Photoshop et Illustrator</li>
+                                    <li>Type : tableau</li>
+                                    <li>Date : 26/09/2020</li>
+                                </ul>
+                            </div>
+
+                      </article>
                       
                        <article id="artcImg30" class="pair ">
                        <figure class="pair nuit paysage" onclick="cpt=30; Zoom();">
@@ -1132,7 +1159,7 @@
                             <ul>
                                 <li>Dimensions : 1280 x 720 pixels</li>
                                 <li>Technique : FlStudio20, After Effect et Photoshop</li>
-                                <li>Type : Music et animation</li>
+                                <li>Type : Musique et animation</li>
                                 <li>Date : 25/07/2020</li>
                             </ul>
                         </div>
@@ -1153,7 +1180,7 @@
                             <ul>
                                 <li>Dimensions : 1280 x 720 pixels</li>
                                 <li>Technique : FlStudio20, After Effect et Photoshop</li>
-                                <li>Type : Music et animation</li>
+                                <li>Type : Musique et animation</li>
                                 <li>Date : 23/06/2020</li>
                             </ul>
                         </div>
@@ -1175,7 +1202,7 @@
                                 <ul>
                                     <li>Dimensions : 1280 x 720 pixels</li>
                                     <li>Technique : FlStudio20, After Effect et Photoshop</li>
-                                    <li>Type : Music et animation</li>
+                                    <li>Type : Musique et animation</li>
                                     <li>Date : 23/06/2020</li>
                                 </ul>
                             </div>
@@ -1189,13 +1216,13 @@
                             <div class="pair">
                                 <h2>Sweet Dusk</h2>
                                 <p>
-
+                                    La première musique crée avec de nouvelles connaissances sous Fl Studio 20. Sweet Dusk représente plusieurs jours de créations avec l'entrain de créer avec un nouvel outil utilisé que très rarement. J'ai créé cette musique avec le thème d'une mélodie composée au piano durant quelques années avec l'incapacité de la finaliser sans les bons outils. Ce qui est chose faite avec Sweet Dusk qui arbore l'image de cette mélodie avec un léger succès en comparaison de toutes les autres créations présentes sur ma chaîne Youtube.
                                 </p>
                                 <h3>détails</h3>
                                 <ul>
                                     <li>Dimensions : 1280 x 720 pixels</li>
                                     <li>Technique : FlStudio20, After Effect et Photoshop</li>
-                                    <li>Type : Music et animation</li>
+                                    <li>Type : Musique et animation</li>
                                     <li>Date : 23/06/2020</li>
                                 </ul>
                             </div>
@@ -1210,13 +1237,13 @@
                             <div class="impair">
                                 <h2>Musique de type sans âmes n°2 b4</h2>
                                 <p>
-
+                                    Cette musique porte un nom particulier car elle est l'une des premières musiques que j'ai composées par ordinateur. Elle ne mérite, a mon sens, aucun titre précis car elle n'est qu'un test mais un test qui mérite de figurer dans mes créations. Bien que la musique en elle-même ne se compose que d'une mélodie, on pourrait l'interpréter comme une ébauche de Sweet Dusk car elle se compose des mêmes notes et surtout de la même musique originale composée au piano. Cette musique était aussi sensée figurée dans le jeu Lockedup qui, comme souvent dit, ne sortira jamais car il est lui aussi une ébauche.
                                 </p>
                                 <h3>détails</h3>
                                 <ul>
                                     <li>Dimensions : 1280 x 720 pixels</li>
                                     <li>Technique : FlStudio20 et Photoshop</li>
-                                    <li>Type : Music/li>
+                                    <li>Type : Musique/li>
                                     <li>Date : 23/02/2018</li>
                                 </ul>
                             </div>
@@ -1230,13 +1257,13 @@
                             <div class="pair">
                                 <h2>1er musique</h2>
                                 <p>
-
+                                    Comme le titre l'indique, ceci est la toute première musique que j'ai réalisée sur ordinateur. Elle était censée figurer dans Lockedup comme musique pour le login du jeu. Mais celle-ci ne sera présente que sur ma chaîne Youtube comme preuve véridique de son existence. Elle m'a été inspiré par les musiques d'Hollow Knight et certaines autres musiques. Malheureusement elle n'est pour moi pas à la hauteur et je ne saurais vraiment lui décerner le titre de musique à part entière.
                                 </p>
                                 <h3>détails</h3>
                                 <ul>
                                     <li>Dimensions : 1280 x 720 pixels</li>
                                     <li>Technique : FlStudio20 et Photoshop</li>
-                                    <li>Type : Music/li>
+                                    <li>Type : Musique/li>
                                     <li>Date : 03/09/2017</li>
                                 </ul>
                             </div>
@@ -1300,7 +1327,7 @@
         
         <footer>
             <p>Cr&eacute;ateur : Paul MOIO</p>
-            <p>Appuyé sur la touche "c"</p>
+            <p><a onclick="Cat()">Appuyé sur la touche "c"</a></p>
         </footer>
         
         <script src="js/styleAccueil.js"></script> 

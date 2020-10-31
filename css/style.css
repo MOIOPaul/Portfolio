@@ -133,7 +133,7 @@ h2{
     padding-bottom: 15px;
 }
 
-body , .imgOverlay , #image figure , #article figure , figure:hover .imgOverlay , #article figure:hover , #imgZoomer , #ferme , #avant , #arriere , #arriere:active , #ferme:hover, #ferme:active , #avant:hover , #avant:active , #arriere:hover , #arriere:active , #imgZoomer:hover , #ferme:active , #avant:active , #imgZoomer:active , .progressCircles , .fontProgressCircles , #navArticle .actif , #navArticle .inactif , #plusVd.cacher , #plusImg.cacher , #plusMsc.cacher , #plusVd.visible , #plusImg.visible , #plusMsc.visible , #recouvrementVd , #recouvrementImg , #recouvrementMsc , #navEnTete.scroll , #navEnTete.notScroll , #navEnTete.hidenScroll , #navEnTete.scroll , #btnNavArticle.actif , #btnNavArticle.inactif , #logo.hidenScroll , #logo.scroll img , #logo.hidenScroll img , #logo.notScroll , #logo.scroll , #logo.notScroll img , .notScroll .decoration , .scroll .decoration , .hidenScroll .decoration {
+body , .imgOverlay , #image figure , #article figure , figure:hover .imgOverlay , #article figure:hover , #imgZoomer , .btnFerme , #avant , #arriere , #arriere:active , .btnFerme:hover, .btnFerme:active , #avant:hover , #avant:active , #arriere:hover , #arriere:active , #imgZoomer:hover , .btnFerme:active , #avant:active , #imgZoomer:active , .progressCircles , .fontProgressCircles , #navArticle .actif , #navArticle .inactif , #plusVd.cacher , #plusImg.cacher , #plusMsc.cacher , #plusVd.visible , #plusImg.visible , #plusMsc.visible , #recouvrementVd , #recouvrementImg , #recouvrementMsc , #navEnTete.scroll , #navEnTete.notScroll , #navEnTete.hidenScroll , #navEnTete.scroll , #btnNavArticle.actif , #btnNavArticle.inactif , #logo.hidenScroll , #logo.scroll img , #logo.hidenScroll img , #logo.notScroll , #logo.scroll , #logo.notScroll img , .notScroll .decoration , .scroll .decoration , .hidenScroll .decoration {
 
     transition : 0.2s;
     
@@ -284,7 +284,7 @@ figure:hover .imgOverlay {
     to {transform:scale(1)}
 }
 
-#ferme , #avant , #arriere{
+.btnFerme , #avant , #arriere{
     color: #EEE;
     font-weight: bold;
     height: 70px;
@@ -295,7 +295,7 @@ figure:hover .imgOverlay {
     line-height: 1em;
 }
 
-#ferme{
+.btnFerme{
     font-size: 5em;
     position: absolute;
     top: 2%;
@@ -318,8 +318,8 @@ figure:hover .imgOverlay {
     transform: scale(0.8) rotate(180deg);
 }
 
-#ferme:hover,
-#ferme:active , #avant:hover , #avant:active , #arriere:hover , #arriere:active {
+.btnFerme:hover,
+.btnFerme:active , #avant:hover , #avant:active , #arriere:hover , #arriere:active {
     opacity: 0.7;
     text-decoration: none;
     cursor: pointer;
@@ -330,7 +330,7 @@ figure:hover .imgOverlay {
     cursor: pointer;
 }
 
-#ferme:active , #avant:active , #imgZoomer:active{
+.btnFerme:active , #avant:active , #imgZoomer:active{
     transform: scale(0.8);
 }
 
